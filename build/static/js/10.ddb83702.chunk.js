@@ -1,0 +1,2 @@
+(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[10],{340:function(t,e,i){"use strict";i.r(e),e.default=i.p+"static/media/isabelhahn.224e7b64.jpg"}}]);
+//# sourceMappingURL=10.ddb83702.chunk.js.map

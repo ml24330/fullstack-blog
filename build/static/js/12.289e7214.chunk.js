@@ -1,2 +1,0 @@
-(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[12],{360:function(t,e,a){"use strict";a.r(e),e.default=a.p+"static/media/placeholder.0a8adf32.png"}}]);
-//# sourceMappingURL=12.289e7214.chunk.js.map
