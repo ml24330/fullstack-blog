@@ -1,0 +1,2 @@
+(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[5],{332:function(c,i,t){"use strict";t.r(i),i.default=t.p+"static/media/gloriaschiavo.abbcdec0.jpg"}}]);
+//# sourceMappingURL=5.12c5c6d0.chunk.js.map

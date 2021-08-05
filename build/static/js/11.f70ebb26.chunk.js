@@ -1,0 +1,2 @@
+(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[11],{338:function(t,i,c){"use strict";c.r(i),i.default=c.p+"static/media/loraizvorova.ec964043.jpg"}}]);
+//# sourceMappingURL=11.f70ebb26.chunk.js.map
