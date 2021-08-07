@@ -14,6 +14,10 @@ const Author = mongoose.model('Author', new mongoose.Schema({
     name: String,
     bio: String,
     category: String,
+    image: {
+        data: Buffer,
+        contentType: String
+    }
 }))
 
 const Visit = mongoose.model('Visit', new mongoose.Schema({
