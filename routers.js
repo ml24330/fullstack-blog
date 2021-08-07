@@ -329,8 +329,22 @@ visitsRouter.get('/:id', async (req, res) => {
     }    
 })
 
+// INCREMENT one visit data
+visitsRouter.patch('/inc/:id', async (req, res) => {
+    try {
+        const doc = await Visit.findOneAndUpdate({ id: req.params.id }, { $inc: { visits: 1 } }, { new: true })
+        if(!doc) {
+            throw new Error('No documents found!')
+        }
+        return res.json(doc)
+    } catch(e) {
+        console.log(`Error while incrementing visit data: ${e}`)
+        return res.status(404).json('An error has occurred!')
+    }
+})
+
 // UPDATE one visit data
-visitsRouter.patch('/:id', async (req, res) => {
+visitsRouter.patch('/:id', authMiddleware, async (req, res) => {
     try {
         const { type, value } = req.body
         if(!type || !value) {
