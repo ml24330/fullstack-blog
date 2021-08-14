@@ -34,15 +34,16 @@ a:hover {
 
 .header-banner {
     width: 100vw;
-    height: 200px;
+    height: calc(min(100vw,900px)/4);
     margin-bottom: 30px;
-    overflow: hidden;
+    overflow: show;
     text-align: center;
     background-color: rgb(10,10,10);
 }
 
 .header-banner img {
-    height: 200px;
+    width: 100vw;
+    max-width: 900px;
 }
 
 .nav-search {
@@ -55,24 +56,7 @@ a:hover {
     transform: translateX(-30px) translateY(-2px);
 }
 
-@media (max-width: 840px) {
-    .header-banner img {
-        height: 150px;
-    }
-
-    .header-banner {
-        height: 150px;
-    }
-}
-
 @media (max-width: 600px) {
-    .header-banner img {
-        height: 95px;
-    }
-
-    .header-banner {
-        height: 95px;
-    }
 
     .header-title {
         font-size: 1.7rem;
@@ -139,13 +123,13 @@ a:hover {
 */
 
 .home-container > div {
-    width: 400px;
-    padding: 0 10px;
+    width: 350px;
+    padding: 0 0 0 10px;
     margin: 0 0 20px 0;
 }
 
 .home-container > div:first-child {
-    width: 700px;
+    width: 650px;
     padding: 0 20px;
 }
 
