@@ -3,6 +3,7 @@ import PaginatorComponent from '../components/PaginatorComponent'
 import Loading from '../components/Loading'
 import book from '../assets/images/book.svg'
 import { Helmet } from 'react-helmet'
+import { API_URL } from '../config'
 
 export default function Category({ match, history }) {
 
@@ -10,7 +11,7 @@ export default function Category({ match, history }) {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`/api/posts/${match.params.cat}`)
+            const res = await fetch(`${API_URL}/posts/${match.params.cat}`)
             if(res.status === 404) {
                 history.push(`/404?from=${window.location.href}`)
             }

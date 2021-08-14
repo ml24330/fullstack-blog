@@ -17,6 +17,7 @@ import PaginatorComponent from './PaginatorComponent'
 import header from '../assets/images/header.png'
 import logo from '../assets/images/logo.png'
 import search from '../assets/images/search.svg'
+import { API_URL } from '../config'
 
 
 export default function HeaderComponent() {
@@ -42,7 +43,7 @@ export default function HeaderComponent() {
     const handleSearch = (e) => {
         if(query && (!e.key || e.key === 'Enter')) {
             (async () => {
-                const res = await fetch(`/api/posts/search/${query}`)
+                const res = await fetch(`${API_URL}/posts/search/${query}`)
                 if(res.status === 200) {
                     const dat = await res.json()
                     setResults(dat.reverse())

@@ -3,6 +3,7 @@ import PaginatorComponent from '../components/PaginatorComponent'
 import SidebarComponent from '../components/SidebarComponent'
 import Loading from '../components/Loading'
 import { Helmet } from 'react-helmet'
+import { API_URL } from '../config'
 
 export default function HomePage() {
 
@@ -11,10 +12,10 @@ export default function HomePage() {
 
     useEffect(() => {
         (async () => {
-            const posts_res = await fetch(`/api/posts`)
+            const posts_res = await fetch(`${API_URL}/posts`)
             const posts_dat = await posts_res.json()
             setRecentPosts(posts_dat.reverse())
-            const visits_res = await fetch('/api/visits')
+            const visits_res = await fetch(`${API_URL}/visits`)
             const visits_dat = await visits_res.json()
             const map = {}
             for(const obj of visits_dat) {

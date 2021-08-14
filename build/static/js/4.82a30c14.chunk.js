@@ -1,2 +1,0 @@
-(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[4],{334:function(t,a,i){"use strict";i.r(a),a.default=i.p+"static/media/austinchan.3ae8bd6a.jpg"}}]);
-//# sourceMappingURL=4.82a30c14.chunk.js.map

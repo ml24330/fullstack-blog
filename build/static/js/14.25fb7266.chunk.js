@@ -1,2 +1,0 @@
-(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[14],{343:function(i,t,c){"use strict";c.r(t),t.default=c.p+"static/media/williamwong.d68c80b9.jpg"}}]);
-//# sourceMappingURL=14.25fb7266.chunk.js.map

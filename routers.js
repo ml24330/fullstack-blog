@@ -11,6 +11,7 @@ const postRouter = express.Router()
 const authorsRouter = express.Router()
 const visitsRouter = express.Router()
 
+
 const slugify = (string) => {
     return sw.removeStopwords(string.split(' ')).join(' ').toString().toLowerCase()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -21,53 +22,9 @@ const slugify = (string) => {
     console.log(slug)
 }
 
-
-/*
-    Authentication middleware
-*/
-
-const authMiddleware = (req, res, next) => {
-    try {
-        if(req.body.token === process.env.TOKEN) {
-            next()
-        } else {
-            res.status(401).json('Authentication failed!')
-        }
-    } catch(e) {
-        console.log(`Error while authenticating client: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
-}
-
-
 /*
     The /posts router
 */
-
-// CREATE one new post
-postsRouter.post('/', authMiddleware, async (req, res) => {
-    try {
-        const { title, author, authors, categories, body, date } = req.body
-        if(!title || !categories || !body || !date || (!author && !authors)) {
-            throw new Error('Missing fields!')
-        }
-        const slug = slugify(title)
-        const post = new Post({
-            slug,
-            title,
-            author,
-            authors,
-            categories,
-            body,
-            date
-        })
-        await post.save()
-        return res.json(post)
-    } catch(e) {
-        console.log(`Error while creating new post: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
-})
 
 // READ all posts
 postsRouter.get('/', async (req, res) => {
@@ -81,7 +38,7 @@ postsRouter.get('/', async (req, res) => {
 })
 
 // READ posts containing search query
-postsRouter.get('/search/:query', async (req, res) => {
+postsRouter.get('/search/:query(*)', async (req, res) => {
     const query = req.params.query.replace(/[^\w\s]/gi, '')
     try {
         if(!query) {
@@ -113,40 +70,6 @@ postsRouter.get('/:category', async (req, res) => {
     } catch(e) {
         console.log(`Error while indexing posts by category: ${e}`)
         return res.status(404).json('An error has occurred!')
-    }
-})
-
-// UPDATE one post
-postsRouter.patch('/:id', authMiddleware, async (req, res) => {
-    try {
-        const { title, author, authors, categories, body, date } = req.body
-        if(!title || !categories || !body || !date || (!author && !authors)) {
-            throw new Error('Missing fields!')
-        }
-        const post = {
-            title,
-            author,
-            authors,
-            categories,
-            body,
-            date
-        }
-        const doc = await Post.findOneAndUpdate({ _id: req.params.id }, post, { new: true })
-        return res.json(doc)
-    } catch(e) {
-        console.log(`Error while updating post: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
-})
-
-// DELETE one post
-postsRouter.delete('/:id', authMiddleware, async (req, res) => {
-    try {
-        await Post.findOneAndDelete({ _id: req.params.id })
-        return res.status(204).send()
-    } catch(e) {
-        console.log(`Error while deleting post: ${e}`)
-        return res.status(400).json('An error has occurred!')
     }
 })
 
@@ -189,26 +112,6 @@ postRouter.get('/slug/:slug', async (req, res) => {
     The /authors router
 */
 
-// CREATE one new author
-authorsRouter.post('/', authMiddleware, async (req, res) => {
-    try {
-        const { name, bio, category } = req.body
-        if(!name || !bio || !category) {
-            throw new Error('Missing fields!')
-        }
-        const author = new Author({
-            name,
-            bio,
-            category
-        })
-        await author.save()
-        return res.json(author)
-    } catch(e) {
-        console.log(`Error while creating new author: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
-})
-
 // READ all authors
 authorsRouter.get('/', async (req, res) => {
     try {
@@ -247,37 +150,6 @@ authorsRouter.get('/:name', async (req, res) => {
     }
 
     res.json({...JSON.parse(JSON.stringify(author)), posts})
-})
-
-// UPDATE one author
-authorsRouter.patch('/:name', authMiddleware, async (req, res) => {
-    try {
-        const { name, bio, category } = req.body
-        if(!name || !bio || !category) {
-            throw new Error('Missing fields!')
-        }
-        const author = {
-            name,
-            bio,
-            category
-        }
-        const doc = await Author.findOneAndUpdate({ name: req.params.name }, author, { new: true })
-        return res.json(doc)
-    } catch(e) {
-        console.log(`Error while updating author: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
-})
-
-// DELETE one author
-authorsRouter.delete('/:name', authMiddleware, async (req, res) => {
-    try {
-        await Author.findOneAndDelete({ name: req.params.name })
-        return res.status(204).send()
-    } catch(e) {
-        console.log(`Error while deleting author: ${e}`)
-        return res.status(400).json('An error has occurred!')
-    }
 })
 
 
@@ -340,47 +212,6 @@ visitsRouter.patch('/inc/:id', async (req, res) => {
     } catch(e) {
         console.log(`Error while incrementing visit data: ${e}`)
         return res.status(404).json('An error has occurred!')
-    }
-})
-
-// UPDATE one visit data
-visitsRouter.patch('/:id', authMiddleware, async (req, res) => {
-    try {
-        const { type, value } = req.body
-        if(!type || !value) {
-            throw new Error('Missing fields!')
-        }
-        let doc
-        switch(type) {
-            case 'set':
-                doc = await Visit.findOneAndUpdate({ id: req.params.id }, { visits: value }, { new: true })
-                if(!doc) {
-                    throw new Error('No documents found!')
-                }
-                return res.json(doc)
-            case 'change':
-                doc = await Visit.findOneAndUpdate({ id: req.params.id }, { $inc: { visits: value } }, { new: true })
-                if(!doc) {
-                    throw new Error('No documents found!')
-                }
-                return res.json(doc)
-            default:
-                throw new Error('Invalid operation type!')
-        }
-    } catch(e) {
-        console.log(`Error while updating visit data: ${e}`)
-        return res.status(404).json('An error has occurred!')
-    }
-})
-
-// DELETE one visit data
-visitsRouter.delete('/:id', authMiddleware, async (req, res) => {
-    try {
-        await Visit.findOneAndDelete({ id: req.params.id })
-        return res.status(204).send()
-    } catch(e) {
-        console.log(`Error while deleting visit data: ${e}`)
-        return res.status(400).json('An error has occurred!')
     }
 })
 

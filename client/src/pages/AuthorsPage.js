@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import AuthorComponent from '../components/AuthorComponent'
 import Loading from '../components/Loading'
 import { Helmet } from 'react-helmet'
+import { API_URL } from '../config'
 
 export default function AuthorsPage() {
 
@@ -10,7 +11,7 @@ export default function AuthorsPage() {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch('/api/authors')
+            const res = await fetch(`${API_URL}/authors`)
             const dat = await res.json()
             setAuthors(dat)
             const roles = dat.reduce((prev, current) => {

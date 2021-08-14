@@ -8,6 +8,7 @@ import Loading from '../components/Loading'
 import { DiscussionEmbed } from 'disqus-react'
 import time from '../assets/images/time.svg'
 import { Helmet } from 'react-helmet'
+import { API_URL } from '../config'
 
 export default function Post({ match, history }) {
 
@@ -16,20 +17,20 @@ export default function Post({ match, history }) {
 
     useEffect(() => {
         (async () => {
-            const post_res = await fetch(`/api/post/slug/${match.params.title}`)
+            const post_res = await fetch(`${API_URL}/post/slug/${match.params.title}`)
             if(post_res.status === 404) {
                 history.push(`/404?from=${window.location.href}`)
             }
             const post_dat = await post_res.json()
             setPost(post_dat)
             if(post.slug) {
-                const visits_res = await fetch(`/api/visits/inc/${post.slug}`, { 
+                const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
                     method: 'PATCH'
                 })
                 if(visits_res.status === 404) {
                     await fetch(`/api/visits/${post.slug}`, { method: 'post' })
                 }
-                const post_res = await fetch(`/api/visits/${post.slug}`)
+                const post_res = await fetch(`${API_URL}/visits/${post.slug}`)
                 const post_dat = await post_res.json()
                 setVisits(post_dat.visits)
             }   
@@ -62,8 +63,11 @@ export default function Post({ match, history }) {
                 </span>
             ))}</span>}
             <span> - </span>
-            <span>{post.categories.map(category => (
-                <span key={category}><Link to={`/category/${category}`}>{category}</Link></span>
+            <span>{post.categories.map((category, idx) => (
+                <span key={category}>
+                    <span>{category}</span>
+                    {idx+1 !== post.categories.length && <span> & </span>}
+                </span>
             ))}</span>
             <div className="post-title">{post.title}</div>
             <div className="post-meta">

@@ -46,13 +46,13 @@ const main = async () => {
         console.log(`Saved ${idx+1}/${posts.length} posts...`)
     }
     
-    for (const [idx, { name, bio, category }] of authors.entries()) {
+    for (const [idx, { name, bio, category, image }] of authors.entries()) {
         const author = new Author({
             name,
             bio,
-            category
+            category,
+            image
         })
-
         await author.save()
         console.log(`Saved ${idx+1}/${authors.length} authors...`)
     }

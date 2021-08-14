@@ -12,14 +12,14 @@ export default function AuthorComponent({ author }) {
     useEffect(() => {
         (async () => {
             try {
-                const image = await import(`../assets/images/${author.name.replace(/ /g,'').toLowerCase()}.jpg`)
-                setImage(image.default)
+                const img = new Buffer.from(author.image.data).toString('base64')
+                setImage(`data:image/png;base64,${img}`)
             } catch(e) {
                 const image = await import('../assets/images/placeholder.png')
                 setImage(image.default)
             }
         })()
-    }, [author.name])
+    }, [author.image.data])
 
     return (
         <div className="author-card card" body>

@@ -24,6 +24,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use('/api/authors', authorsRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/post', postRouter)
