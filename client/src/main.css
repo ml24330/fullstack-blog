@@ -139,9 +139,14 @@ a:hover {
 */
 
 .home-container > div {
-    width: 380px;
+    width: 400px;
     padding: 0 10px;
     margin: 0 0 20px 0;
+}
+
+.home-container > div:first-child {
+    width: 700px;
+    padding: 0 20px;
 }
 
 .home-container > div:not(:first-child) {

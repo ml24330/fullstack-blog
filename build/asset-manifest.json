@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.3d77cc74.chunk.css",
-    "main.js": "/static/js/main.0b0fcf74.chunk.js",
-    "main.js.map": "/static/js/main.0b0fcf74.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f4aab721.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f4aab721.js.map",
+    "main.css": "/static/css/main.d12ab4f8.chunk.css",
+    "main.js": "/static/js/main.206a28e6.chunk.js",
+    "main.js.map": "/static/js/main.206a28e6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.396c2bd8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.396c2bd8.js.map",
     "static/css/2.455652b6.chunk.css": "/static/css/2.455652b6.chunk.css",
-    "static/js/2.85156534.chunk.js": "/static/js/2.85156534.chunk.js",
-    "static/js/2.85156534.chunk.js.map": "/static/js/2.85156534.chunk.js.map",
-    "static/js/3.f450916f.chunk.js": "/static/js/3.f450916f.chunk.js",
-    "static/js/3.f450916f.chunk.js.map": "/static/js/3.f450916f.chunk.js.map",
-    "static/js/4.e50e7c71.chunk.js": "/static/js/4.e50e7c71.chunk.js",
-    "static/js/4.e50e7c71.chunk.js.map": "/static/js/4.e50e7c71.chunk.js.map",
+    "static/js/2.cc215253.chunk.js": "/static/js/2.cc215253.chunk.js",
+    "static/js/2.cc215253.chunk.js.map": "/static/js/2.cc215253.chunk.js.map",
+    "static/js/3.3f29320a.chunk.js": "/static/js/3.3f29320a.chunk.js",
+    "static/js/3.3f29320a.chunk.js.map": "/static/js/3.3f29320a.chunk.js.map",
+    "static/js/4.6603d7e6.chunk.js": "/static/js/4.6603d7e6.chunk.js",
+    "static/js/4.6603d7e6.chunk.js.map": "/static/js/4.6603d7e6.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.455652b6.chunk.css.map": "/static/css/2.455652b6.chunk.css.map",
-    "static/css/main.3d77cc74.chunk.css.map": "/static/css/main.3d77cc74.chunk.css.map",
-    "static/js/2.85156534.chunk.js.LICENSE.txt": "/static/js/2.85156534.chunk.js.LICENSE.txt",
+    "static/css/main.d12ab4f8.chunk.css.map": "/static/css/main.d12ab4f8.chunk.css.map",
+    "static/js/2.cc215253.chunk.js.LICENSE.txt": "/static/js/2.cc215253.chunk.js.LICENSE.txt",
     "static/media/3VB.0e9c1f0c.jpg": "/static/media/3VB.0e9c1f0c.jpg",
     "static/media/Launch.8a4535af.jpg": "/static/media/Launch.8a4535af.jpg",
     "static/media/Launch2.27d3206c.jpg": "/static/media/Launch2.27d3206c.jpg",
@@ -39,10 +39,10 @@
     "static/media/trinity-college-law-review.601da894.png": "/static/media/trinity-college-law-review.601da894.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f4aab721.js",
+    "static/js/runtime-main.396c2bd8.js",
     "static/css/2.455652b6.chunk.css",
-    "static/js/2.85156534.chunk.js",
-    "static/css/main.3d77cc74.chunk.css",
-    "static/js/main.0b0fcf74.chunk.js"
+    "static/js/2.cc215253.chunk.js",
+    "static/css/main.d12ab4f8.chunk.css",
+    "static/js/main.206a28e6.chunk.js"
   ]
 }

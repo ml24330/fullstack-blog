@@ -37,13 +37,9 @@ export default function HomePage() {
             </Helmet>
             <div>
                 <div className="section-title">Recent posts</div>
-                <PaginatorComponent objs={recentPosts} perPage={7}/>
+                <PaginatorComponent objs={recentPosts} perPage={10}/>
             </div>
-            <div>
-                <div className="section-title">Popular posts</div>
-                <PaginatorComponent objs={popularPosts} perPage={7}/>
-            </div>
-            <SidebarComponent posts={recentPosts} />
+            <SidebarComponent posts={popularPosts} />
         </div>
     )
 }
