@@ -4,6 +4,7 @@ import Cambridge from '../assets/images/cambridge-law-review.png'
 import DeLege from '../assets/images/de-lege-ferenda-cambridge-law-review.png'
 import Exeter from '../assets/images/exeter-law-review.png'
 import Glasgow from '../assets/images/glasgow-law-review.png'
+import HULR from '../assets/images/HULR.png'
 import Kings from '../assets/images/kings-student-law-review.png'
 import Oxford from '../assets/images/oxford-university-undergraduate-law-journal.png'
 import SOUH from '../assets/images/sohp.png'
@@ -44,6 +45,12 @@ export default function PartnersPage() {
             <p class="mb-4">As the University of Exeter Law School's flagship academic publication, the Exeter Law Review serves as a platform for innovative and sophisticated legal exposition, discussion, and debate. An open-access publication that also is available on HeinOnline, it has a distinguished history stemming from its original inception as the Bracton Law Journal in 1967. The Review is committed to the highest scholarly standards and to making a meaningful contribution to the legal community. </p>
             <p class="mb-0">Learn more: <a href="https://www.exeterlaw.org/" target="_blank" rel="noopener noreferrer">www.exeterlaw.org</a></p>
             <p>Enquiries: <a href="mailto:ex­eter­lawre­view@gmail.com">ex­eter­lawre­view@gmail.com</a></p>
+            <br />
+
+            <h5 class="page-heading-small">Harvard Undergraduate Law Review</h5>
+            <img className="img-small" src={HULR} alt="harvard" />
+            <p class="mb-4">The Harvard Undergraduate Law Review (HULR) is a student-run organisation at Harvard College that is dedicated to providing undergraduates with an opportunity to learn about the field of law and the career options it provides. It aims to educate Harvard undergraduates interested in pursuing law by encouraging lively, scholarly debate on a wide variety of legal topics. As the only legal publication on campus, it has a broad audience that is eager to participate in world-class discussion of legal issues and learn from the resources that the publication offers. </p>
+            <p class="mb-0">Learn more: <a href="https://hulr.org" target="_blank" rel="noopener noreferrer">hulr.org</a></p>
             <br />
 
             <h5 class="page-heading-small">King's Student Law Review</h5>

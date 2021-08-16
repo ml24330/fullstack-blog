@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-import { authorsRouter, postsRouter, postRouter, visitsRouter } from './routers.js'
+import { authorsRouter, postsRouter, postRouter, visitsRouter, visitorRouter } from './routers.js'
 
 dotenv.config()
 const PORT = process.env.PORT || 5000
@@ -29,6 +29,7 @@ app.use('/api/authors', authorsRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/post', postRouter)
 app.use('/api/visits', visitsRouter)
+app.use('/api/visitor', visitorRouter)
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('build'))

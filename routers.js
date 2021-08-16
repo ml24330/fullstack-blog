@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import sw from 'stopword'
 
-import { Post, Author, Visit } from './models.js'
+import { Post, Author, Visit, Visitor } from './models.js'
 
 dotenv.config()
 
@@ -10,6 +10,7 @@ const postsRouter = express.Router()
 const postRouter = express.Router()
 const authorsRouter = express.Router()
 const visitsRouter = express.Router()
+const visitorRouter = express.Router()
 
 
 const slugify = (string) => {
@@ -215,4 +216,20 @@ visitsRouter.patch('/inc/:id', async (req, res) => {
     }
 })
 
-export { postsRouter, postRouter, authorsRouter, visitsRouter }
+
+visitorRouter.post('/', async (req, res) => {
+    try {
+        const visitor = new Visitor({
+            time: Date.now(),
+            location: req.body.location
+        })
+        const doc = await visitor.save()
+        return res.json(doc)
+    } catch(e) {
+        console.log(`Error while recording visitor location: ${e}`)
+        return res.status(404).json('An error has occurred!')
+    }
+})
+
+export { postsRouter, postRouter, authorsRouter, visitsRouter, visitorRouter }
+

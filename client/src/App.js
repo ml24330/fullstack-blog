@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
@@ -15,9 +15,23 @@ import Post from './pages/Post'
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent'
 import ScrollToTop from './ScrollToTop'
+import { API_URL } from './config'
 
 
 function App() {
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch('http://ip-api.com/json/')
+      const { country } = await res.json()
+      await fetch(`${API_URL}/visitor`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({location: country})
+      })
+    })()
+  })
+
   return (
     <Router>
       <div className="App">
