@@ -72,7 +72,6 @@ export default function Post({ match, history }) {
             <div className="post-title">{post.title}</div>
             <div className="post-meta">
                 <span className="post-date">{renderDate(post.date)}</span>
-                <span className="post-views">{visits} {visits === 1 ? 'view' : 'views'}</span>
                 <span className="post-time"><img src={time} alt="time" />{Math.ceil(readingTime(removeMd(post.content).split('[1]')[0], { wordsPerMinute: 250 }).minutes)} min read</span>
             </div>
             <div className="page-content">
