@@ -14,7 +14,7 @@ dotenv.config()
 const PORT = process.env.PORT || 5000
 
 mongoose.set('useFindAndModify', false)
-mongoose.connect(`mongodb+srv://root:${process.env.DB_PASSWORD}@cluster0.swmsg.mongodb.net/lselawreview?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(`mongodb+srv://lse:${process.env.DB_PASSWORD}@lselr.kea2z.mongodb.net/LSELR?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'Connection error:'))
@@ -30,6 +30,10 @@ app.use('/api/posts', postsRouter)
 app.use('/api/post', postRouter)
 app.use('/api/visits', visitsRouter)
 app.use('/api/visitor', visitorRouter)
+
+app.get('/sitemap', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'sitemap.xml'))
+})
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('build'))

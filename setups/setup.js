@@ -3,7 +3,10 @@ import posts from './post.js'
 import authors from './author.js'
 
 import { Post, Author, Visit } from '../models.js'
-mongoose.connect(`mongodb+srv://root:${'root'}@cluster0.swmsg.mongodb.net/lselawreview?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
+import dotenv from 'dotenv'
+dotenv.config()
+
+mongoose.connect(`mongodb+srv://lse:${process.env.DB_PASSWORD}@lselr.kea2z.mongodb.net/LSELR?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', async () => {

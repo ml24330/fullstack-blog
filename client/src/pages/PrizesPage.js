@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Launch from '../assets/images/Launch2.jpg'
 import PostComponent from '../components/PostComponent'
 import { Helmet } from 'react-helmet'
+import { API_URL } from '../config'
 
 const slugs = {'building-the-conscience-of-humankind': 'LSE Law Review Prize for Best Blog Post 2021', 'a-tale-of-communities': 'LSE Law Review Prize for Best Case Note 2021', 'treaties-norms-international-courts-hierarchy-theory-treading-water': 'LSE Law Review Prize for Best Blog Post 2020', 'r-evans-uneasy-precedent': 'Francis Taylor Building Prize for Best Case Note 2020', 'english-choice-law-contract-rome-i-regime': 'LSE Law Review Prize for Best Blog Post 2019' }
 
@@ -13,7 +14,7 @@ export default function PrizesPage() {
         (async () => {
             const posts = []
             for(const slug of Object.keys(slugs)) {
-                const res = await fetch(`/api/post/slug/${slug}`)
+                const res = await fetch(`${API_URL}/post/slug/${slug}`)
                 const dat = await res.json()
                 posts.push(dat)
             }

@@ -221,7 +221,8 @@ visitorRouter.post('/', async (req, res) => {
     try {
         const visitor = new Visitor({
             time: Date.now(),
-            location: req.body.location
+            location: req.body.location,
+            entry: req.body.entry
         })
         const doc = await visitor.save()
         return res.json(doc)

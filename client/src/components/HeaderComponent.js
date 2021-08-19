@@ -74,25 +74,25 @@ export default function HeaderComponent() {
                 <Collapse isOpen={navIsOpen} navbar>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
-                        <NavLink href="/">Home</NavLink>
+                        <Link to="/"><NavLink>Home</NavLink></Link>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
                             About
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem href="/about">
+                            <Link to="/about"><DropdownItem>
                             About Us
-                            </DropdownItem>
+                            </DropdownItem></Link>
                             <DropdownItem href="https://lawreview.lse.ac.uk/about/editorialteam/" target="_blank" rel="noreferrer noopener">
                             Editorial Team
                             </DropdownItem>
-                            <DropdownItem href="/sponsors">
+                            <Link to="/sponsors"><DropdownItem>
                             Sponsors
-                            </DropdownItem>
-                            <DropdownItem href="/partners">
+                            </DropdownItem></Link>
+                            <Link to="partners"><DropdownItem>
                             Partners
-                            </DropdownItem>
+                            </DropdownItem></Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <UncontrolledDropdown nav inNavbar>
@@ -100,12 +100,12 @@ export default function HeaderComponent() {
                             Authors
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem href="/authors">
+                            <Link to="/authors"><DropdownItem>
                             All Authors
-                            </DropdownItem>
-                            <DropdownItem href="/prizewinners">
+                            </DropdownItem></Link>
+                            <Link to="/prizewinners"><DropdownItem>
                             Prize Winners
-                            </DropdownItem>
+                            </DropdownItem></Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <UncontrolledDropdown nav inNavbar>
@@ -113,21 +113,21 @@ export default function HeaderComponent() {
                             Article by Categories
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem href="/category/Criminal Law">
+                            <Link to="/category/Criminal Law"><DropdownItem>
                             Criminal Law
-                            </DropdownItem>
-                            <DropdownItem href="/category/International Law">
+                            </DropdownItem></Link>
+                            <Link to="/category/International Law"><DropdownItem>
                             International Law
-                            </DropdownItem>
-                            <DropdownItem href="/category/Private Law">
+                            </DropdownItem></Link>
+                            <Link to="/category/Private Law"><DropdownItem>
                             Private Law
-                            </DropdownItem>
-                            <DropdownItem href="/category/Public Law">
+                            </DropdownItem></Link>
+                            <Link to="/category/Public Law"><DropdownItem>
                             Public Law
-                            </DropdownItem>
+                            </DropdownItem></Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                    <NavLink href="/submissions">Submission Guidelines</NavLink>
+                    <Link to="/submissions"><NavLink>Submission Guidelines</NavLink></Link>
                     <NavLink href="https://lawreview.lse.ac.uk" target="_blank" rel="noreferrer noopener">Main Journal Site</NavLink>
                     <NavLink className="nav-search"><input value={query} placeholder="Search posts..." onChange={handleChange} onKeyDown={handleSearch} /><img src={search} alt="search" onClick={handleSearch} /></NavLink>
                 </Nav>

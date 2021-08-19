@@ -27,7 +27,8 @@ const Visit = mongoose.model('Visit', new mongoose.Schema({
 
 const Visitor = mongoose.model('Visitor', new mongoose.Schema({
     time: Date,
-    location: String
+    location: String,
+    entry: String
 }))
 
 export {Post, Author, Visit, Visitor}

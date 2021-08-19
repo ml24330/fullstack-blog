@@ -22,15 +22,15 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('http://ip-api.com/json/')
+      const res = await fetch('https://extreme-ip-lookup.com/json/')
       const { country } = await res.json()
       await fetch(`${API_URL}/visitor`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({location: country})
+        body: JSON.stringify({location: country, entry: window.location.href})
       })
     })()
-  })
+  }, [])
 
   return (
     <Router>
