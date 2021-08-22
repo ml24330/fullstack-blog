@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-import { authorsRouter, postsRouter, postRouter, visitsRouter, visitorRouter } from './routers.js'
+import { authorsRouter, postsRouter, postRouter, visitsRouter, visitorRouter, imagesRouter } from './routers.js'
 
 dotenv.config()
 const PORT = process.env.PORT || 5000
@@ -30,6 +30,7 @@ app.use('/api/posts', postsRouter)
 app.use('/api/post', postRouter)
 app.use('/api/visits', visitsRouter)
 app.use('/api/visitor', visitorRouter)
+app.use('/api/images', imagesRouter)
 
 app.get('/sitemap', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'sitemap.xml'))

@@ -13,27 +13,36 @@ import { API_URL } from '../config'
 export default function Post({ match, history }) {
 
     const [post, setPost] = useState({})
-    const [visits, setVisits] = useState()
+    // const [image, setImage] = useState()
+    // const [visits, setVisits] = useState()
 
     useEffect(() => {
         (async () => {
-            const post_res = await fetch(`${API_URL}/post/slug/${match.params.title}`)
-            if(post_res.status === 404) {
+            const res = await fetch(`${API_URL}/post/slug/${match.params.title}`)
+            if(res.status === 404) {
                 history.push(`/404?from=${window.location.href}`)
             }
-            const post_dat = await post_res.json()
-            setPost(post_dat)
-            if(post.slug) {
-                const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
-                    method: 'PATCH'
-                })
-                if(visits_res.status === 404) {
-                    await fetch(`/api/visits/${post.slug}`, { method: 'post' })
-                }
-                const post_res = await fetch(`${API_URL}/visits/${post.slug}`)
-                const post_dat = await post_res.json()
-                setVisits(post_dat.visits)
-            }   
+            const dat = await res.json()
+            setPost(dat)
+
+            // const img_res = await fetch(`${API_URL}/images/${dat.slug}`)
+            // if(img_res.status === 200) {
+            //     const img_dat = await img_res.json()
+            //     const img = new Buffer.from(img_dat.image.data).toString('base64')
+            //     setImage(`data:image/png;base64,${img}`)
+            // }
+
+            // if(post.slug) {
+            //     const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
+            //         method: 'PATCH'
+            //     })
+            //     if(visits_res.status === 404) {
+            //         await fetch(`/api/visits/${post.slug}`, { method: 'post' })
+            //     }
+            //     const post_res = await fetch(`${API_URL}/visits/${post.slug}`)
+            //     const post_dat = await post_res.json()
+            //     setVisits(post_dat.visits)
+            // }   
         })()
     }, [match.params.title, post.slug, history])
 
@@ -74,6 +83,7 @@ export default function Post({ match, history }) {
                 <span className="post-date">{renderDate(post.date)}</span>
                 <span className="post-time"><img src={time} alt="time" />{Math.ceil(readingTime(removeMd(post.content).split('[1]')[0], { wordsPerMinute: 250 }).minutes)} min read</span>
             </div>
+            {/* {image && <img className="post-img" src={image} alt={post.title} />}  */}
             <div className="page-content">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
             </div>

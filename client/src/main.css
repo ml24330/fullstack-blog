@@ -353,6 +353,11 @@ a:hover {
     margin: 15px 0 8px 0;
 }
 
+.post-container .post-img {
+    width: 80%;
+    margin: 15px;
+}
+
 /*
     Author styles
 */

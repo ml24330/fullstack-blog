@@ -28,7 +28,7 @@ export default function SubmissionsPage() {
             <li>Please provide a declaration that the submission is entirely the author's own. Any work of others, whether published or not, must be properly identified and referenced.</li>
             </ol>
 
-            Submissions should be sent to <a href="mailto:lselawreview@gmail.com">lselawreview@gmail.com</a>. (We are currently accepting submissions to the LSE Law Review Blog.)
+            Submissions should be sent to <a href="mailto:lselawreview@gmail.com">lselawreview@gmail.com</a>. <strong>(Update as of 22 August 2021: Due to an unprecedented volume of submissions, we will now only be able to review any new submissions after 1 November 2021. This means that you can still submit your article to us in the meantime, but your article will only be reviewed by our editorial team after 1 November 2021.)</strong>
         </div>
     )
 }

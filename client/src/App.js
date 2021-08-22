@@ -8,6 +8,7 @@ import AuthorsPage from './pages/AuthorsPage'
 import Author from './pages/Author'
 import PrizesPage from './pages/PrizesPage'
 import CategoryPage from './pages/CategoryPage'
+import PastBoardsPage from './pages/PastBoardsPage'
 import SubmissionsPage from './pages/SubmissionsPage'
 import PrivacyPage from './pages/PrivacyPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/404" exact component={NotFoundPage} />
           <Route path="/about" exact component={AboutPage} />
+          <Route path="/pastboards" exact component={PastBoardsPage} />
           <Route path="/sponsors" exact component={SponsorsPage} />
           <Route path="/partners" exact component={PartnersPage} />
           <Route path="/authors" exact component={AuthorsPage} />

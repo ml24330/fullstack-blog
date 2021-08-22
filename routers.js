@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import sw from 'stopword'
 
-import { Post, Author, Visit, Visitor } from './models.js'
+import { Post, Author, Visit, Visitor, Image } from './models.js'
 
 dotenv.config()
 
@@ -11,6 +11,7 @@ const postRouter = express.Router()
 const authorsRouter = express.Router()
 const visitsRouter = express.Router()
 const visitorRouter = express.Router()
+const imagesRouter = express.Router()
 
 
 const slugify = (string) => {
@@ -232,5 +233,18 @@ visitorRouter.post('/', async (req, res) => {
     }
 })
 
-export { postsRouter, postRouter, authorsRouter, visitsRouter, visitorRouter }
+imagesRouter.get('/:slug', async (req, res) => {
+    try {
+        const img = await Image.findOne({ slug: req.params.slug })
+        if(!img) {
+            throw new Error('No documents found!')
+        }
+        return res.json(img)
+    } catch(e) {
+        console.log(`Error while indexing image: ${e}`)
+        return res.status(400).json('An error has occurred!')
+    }
+})
+
+export { postsRouter, postRouter, authorsRouter, visitsRouter, visitorRouter, imagesRouter }
 
