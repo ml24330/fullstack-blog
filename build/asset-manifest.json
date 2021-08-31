@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.cbf9a64a.chunk.css",
-    "main.js": "/static/js/main.3b1ba8ef.chunk.js",
-    "main.js.map": "/static/js/main.3b1ba8ef.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9e5db9d0.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9e5db9d0.js.map",
+    "main.css": "/static/css/main.a7be4981.chunk.css",
+    "main.js": "/static/js/main.902ac69c.chunk.js",
+    "main.js.map": "/static/js/main.902ac69c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d823d995.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d823d995.js.map",
     "static/css/2.1aae8a2f.chunk.css": "/static/css/2.1aae8a2f.chunk.css",
-    "static/js/2.1483b98f.chunk.js": "/static/js/2.1483b98f.chunk.js",
-    "static/js/2.1483b98f.chunk.js.map": "/static/js/2.1483b98f.chunk.js.map",
-    "static/js/3.c1cfbe21.chunk.js": "/static/js/3.c1cfbe21.chunk.js",
-    "static/js/3.c1cfbe21.chunk.js.map": "/static/js/3.c1cfbe21.chunk.js.map",
-    "static/js/4.d334b75d.chunk.js": "/static/js/4.d334b75d.chunk.js",
-    "static/js/4.d334b75d.chunk.js.map": "/static/js/4.d334b75d.chunk.js.map",
+    "static/js/2.9451afd5.chunk.js": "/static/js/2.9451afd5.chunk.js",
+    "static/js/2.9451afd5.chunk.js.map": "/static/js/2.9451afd5.chunk.js.map",
+    "static/js/3.e415ceab.chunk.js": "/static/js/3.e415ceab.chunk.js",
+    "static/js/3.e415ceab.chunk.js.map": "/static/js/3.e415ceab.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.1aae8a2f.chunk.css.map": "/static/css/2.1aae8a2f.chunk.css.map",
-    "static/css/main.cbf9a64a.chunk.css.map": "/static/css/main.cbf9a64a.chunk.css.map",
-    "static/js/2.1483b98f.chunk.js.LICENSE.txt": "/static/js/2.1483b98f.chunk.js.LICENSE.txt",
+    "static/css/main.a7be4981.chunk.css.map": "/static/css/main.a7be4981.chunk.css.map",
+    "static/js/2.9451afd5.chunk.js.LICENSE.txt": "/static/js/2.9451afd5.chunk.js.LICENSE.txt",
     "static/media/3VB.0e9c1f0c.jpg": "/static/media/3VB.0e9c1f0c.jpg",
     "static/media/HULR.4451ce65.png": "/static/media/HULR.4451ce65.png",
     "static/media/Launch.8a4535af.jpg": "/static/media/Launch.8a4535af.jpg",
@@ -45,10 +43,10 @@
     "static/media/trinity-college-law-review.601da894.png": "/static/media/trinity-college-law-review.601da894.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9e5db9d0.js",
+    "static/js/runtime-main.d823d995.js",
     "static/css/2.1aae8a2f.chunk.css",
-    "static/js/2.1483b98f.chunk.js",
-    "static/css/main.cbf9a64a.chunk.css",
-    "static/js/main.3b1ba8ef.chunk.js"
+    "static/js/2.9451afd5.chunk.js",
+    "static/css/main.a7be4981.chunk.css",
+    "static/js/main.902ac69c.chunk.js"
   ]
 }

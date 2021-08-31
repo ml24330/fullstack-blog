@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import ReactPaginate from 'react-paginate'
 import PostComponent from './PostComponent'
 
-export default function PaginatorComponent({ objs, perPage }) {
+export default function PaginatorComponent({ objs, perPage, showImage }) {
 
     const [visible, setVisible] = useState(objs.slice(0, perPage))
     
@@ -16,8 +16,8 @@ export default function PaginatorComponent({ objs, perPage }) {
     return (
         <React.Fragment>
             <div ref={container}>
-                {visible.map(obj => (
-                    <PostComponent post={obj} key={obj.title} />
+                {visible.map((obj, idx) => (
+                    <PostComponent post={obj} key={obj.title} showImage={typeof showImage == 'function' ? showImage(idx) : false} />
                 ))}
             </div>
             {objs.length > perPage && 

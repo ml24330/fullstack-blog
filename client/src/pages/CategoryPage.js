@@ -11,6 +11,7 @@ export default function Category({ match, history }) {
 
     useEffect(() => {
         (async () => {
+            setPosts([])
             const res = await fetch(`${API_URL}/posts/${match.params.cat}`)
             if(res.status === 404) {
                 history.push(`/404?from=${window.location.href}`)
@@ -18,7 +19,7 @@ export default function Category({ match, history }) {
             const dat = await res.json()
             setPosts(dat.reverse())
         })()
-    }, [match, history])
+    }, [match.params.cat])
 
     if(posts.length === 0) {
         return <Loading />
@@ -32,7 +33,7 @@ export default function Category({ match, history }) {
             <div className="page-heading">{match.params.cat}</div>
             <div className="page-subheading"><img src={book} alt="posts" />{posts.length} {posts.length === 1 ? 'post' : 'posts'}</div>
             <div className="page-content">
-                <PaginatorComponent objs={posts} perPage={10} />
+                <PaginatorComponent objs={posts} perPage={10} showImage={() => true} />
             </div>
         </div>
     )

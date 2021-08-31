@@ -9,11 +9,14 @@ import { DiscussionEmbed } from 'disqus-react'
 import time from '../assets/images/time.svg'
 import { Helmet } from 'react-helmet'
 import { API_URL } from '../config'
+import placeholder from '../assets/images/placeholder.png'
 
 export default function Post({ match, history }) {
 
     const [post, setPost] = useState({})
-    // const [image, setImage] = useState()
+    const [image, setImage] = useState()
+    const [caption, setCaption] = useState()
+    const [author, setAuthor] = useState({})
     // const [visits, setVisits] = useState()
 
     useEffect(() => {
@@ -25,12 +28,19 @@ export default function Post({ match, history }) {
             const dat = await res.json()
             setPost(dat)
 
-            // const img_res = await fetch(`${API_URL}/images/${dat.slug}`)
-            // if(img_res.status === 200) {
-            //     const img_dat = await img_res.json()
-            //     const img = new Buffer.from(img_dat.image.data).toString('base64')
-            //     setImage(`data:image/png;base64,${img}`)
-            // }
+            const img_res = await fetch(`${API_URL}/images/${dat.slug}`)
+            if(img_res.status === 200) {
+                const img_dat = await img_res.json()
+                const img = new Buffer.from(img_dat.image.data).toString('base64')
+                setImage(`data:image/png;base64,${img}`)
+                setCaption(img_dat.caption)
+            }
+
+            const author_res = await fetch(`${API_URL}/authors/${dat.author}`)
+            if(author_res.status === 200) {
+                const author_dat = await author_res.json()
+                setAuthor(author_dat)
+            }
 
             // if(post.slug) {
             //     const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
@@ -78,14 +88,24 @@ export default function Post({ match, history }) {
                     {idx+1 !== post.categories.length && <span> & </span>}
                 </span>
             ))}</span>
-            <div className="post-title">{post.title}</div>
+            <div className="post-title"><ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.title}</ReactMarkdown></div>
             <div className="post-meta">
                 <span className="post-date">{renderDate(post.date)}</span>
                 <span className="post-time"><img src={time} alt="time" />{Math.ceil(readingTime(removeMd(post.content).split('[1]')[0], { wordsPerMinute: 250 }).minutes)} min read</span>
             </div>
-            {/* {image && <img className="post-img" src={image} alt={post.title} />}  */}
+            {image && <>
+                <img className="post-img" src={image} alt={post.title} />
+                <div className="post-img-caption">{caption}</div>
+            </>} 
             <div className="page-content">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
+            </div>
+            <div className="page-author">
+                <div className="author">
+                    <div><strong>{author.name}</strong></div>
+                    <div>{author.bio}</div>
+                </div>
+                {author.image && (author.image.data ? <div><img src={`data:image/png;base64,${new Buffer.from(author.image.data).toString('base64')}`} alt={author.name}></img></div> : <div><img src={placeholder} alt={author.name} /></div>)}
             </div>
             <div>
                 <DiscussionEmbed

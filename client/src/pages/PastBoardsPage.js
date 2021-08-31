@@ -6,56 +6,148 @@ const placeholder = [
         roles: [
             {
                 title: 'Editor in Chief',
-                members: [{name: 'Grady Arnott', bio: 'LLB \'18'}]
+                members: ['Grady Arnott']
             },
             {
                 title: 'Publications Editors',
-                members: [
-                    {name: 'Lucas Adomeit', bio: 'LLB \'18'},
-                    {name: 'Sarah Kristoffersen', bio: 'LLM \'18'},
-                    {name: 'Lubaba Samin', bio: 'LLB \'19'}
-                ]
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
             },
             {
                 title: 'Management Editors',
-                members: [
-                    {name: 'Pavlina Draganova', bio: 'LLM \'18'},
-                    {name: 'Lora Izvorova', bio: 'LLB \'18'}
-                ]
+                members: ['Pavlina Draganova', 'Lora Izvorova']
             },
             {
                 title: 'Articles Editors',
-                members: [
-                    {name: 'Florence Eicher', bio: 'LLM \'18'},
-                    {name: 'Claire Morris', bio: 'LLM \'18'},
-                    {name: 'Shukri Ahmad Shahizam', bio: 'LLB \'19'},
-                    {name: 'Shan Patel', bio: 'MSc \'18'}
-                ]
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
             },
             {
                 title: 'Junior Editors',
-                members: [
-                    {name: 'Kelly Sim', bio: 'LLB \'20'},
-                    {name: 'Marcus Liang', bio: 'LLB \'20'},
-                    {name: 'May Quin Pau', bio: 'LLB \'20'},
-                    {name: 'Gloria Schiavo', bio: 'LLB \'20'}
-                ]
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
             }
         ]
     }, 
     {
-        name: '2015 Summer Board',
+        name: 'Editorial Board 2017-2018',
         roles: [
             {
                 title: 'Editor in Chief',
-                members: [{name: 'John Doe', bio: 'LLM \'16'}]
+                members: ['Grady Arnott']
             },
             {
-                title: 'Notes Editors',
-                members: [
-                    {name: 'John Doe', bio: 'LLM \'17'},
-                    {name: 'Jane Doe', bio: 'LLB \'18'}
-                ]
+                title: 'Publications Editors',
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
+            },
+            {
+                title: 'Management Editors',
+                members: ['Pavlina Draganova', 'Lora Izvorova']
+            },
+            {
+                title: 'Articles Editors',
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
+            },
+            {
+                title: 'Junior Editors',
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
+            }
+        ]
+    }, 
+    {
+        name: 'Editorial Board 2017-2018',
+        roles: [
+            {
+                title: 'Editor in Chief',
+                members: ['Grady Arnott']
+            },
+            {
+                title: 'Publications Editors',
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
+            },
+            {
+                title: 'Management Editors',
+                members: ['Pavlina Draganova', 'Lora Izvorova']
+            },
+            {
+                title: 'Articles Editors',
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
+            },
+            {
+                title: 'Junior Editors',
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
+            }
+        ]
+    },
+    {
+        name: 'Editorial Board 2017-2018',
+        roles: [
+            {
+                title: 'Editor in Chief',
+                members: ['Grady Arnott']
+            },
+            {
+                title: 'Publications Editors',
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
+            },
+            {
+                title: 'Management Editors',
+                members: ['Pavlina Draganova', 'Lora Izvorova']
+            },
+            {
+                title: 'Articles Editors',
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
+            },
+            {
+                title: 'Junior Editors',
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
+            }
+        ]
+    }, 
+    {
+        name: 'Editorial Board 2017-2018',
+        roles: [
+            {
+                title: 'Editor in Chief',
+                members: ['Grady Arnott']
+            },
+            {
+                title: 'Publications Editors',
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
+            },
+            {
+                title: 'Management Editors',
+                members: ['Pavlina Draganova', 'Lora Izvorova']
+            },
+            {
+                title: 'Articles Editors',
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
+            },
+            {
+                title: 'Junior Editors',
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
+            }
+        ]
+    }, 
+    {
+        name: 'Editorial Board 2017-2018',
+        roles: [
+            {
+                title: 'Editor in Chief',
+                members: ['Grady Arnott']
+            },
+            {
+                title: 'Publications Editors',
+                members: ['Lucas Adomeit', 'Sarah Kristoffersen', 'Lubaba Samin']
+            },
+            {
+                title: 'Management Editors',
+                members: ['Pavlina Draganova', 'Lora Izvorova']
+            },
+            {
+                title: 'Articles Editors',
+                members: ['Florence Eicher', 'Claire Morris', 'Shukri Ahmad Shahizam', 'Shan Patel']
+            },
+            {
+                title: 'Junior Editors',
+                members: ['Kelly Sim', 'Marcus Liang', 'May Quin Pau', 'Gloria Schiavo']
             }
         ]
     }
@@ -68,19 +160,19 @@ export default function PastBoardsPage() {
                 Former Editorial Boards
             </div>
 
+            <div className="d-flex flex-wrap justify-content-center p-2" style={{alignItems: 'flex-start'}}>
             {placeholder.map(board => (
-                <div key={board.name}>
-                    <div className="page-heading-small">{board.name}</div>
+                <div style={{fontFamily: 'Arial', fontSize: '1.1rem', margin: '10px', backgroundColor: 'rgba(0,0,0,0.05)', width: '300px', border: '1px solid transparent', borderRadius: '5px'}} key={board.name}>
+                    <div style={{color: 'white', backgroundColor: 'hsla(280, 50%, 50%, 1)', padding: '10px 5px', fontWeight: 'bold', fontSize: '1.3rem', textAlign: 'center', borderRadius: '5px 5px 0 0'}}>{board.name}</div>
                     {board.roles.map(role => (
-                        <div key={role.title}>
-                            <div style={{marginTop: '5px'}}>
+                        <div style={{padding: '10px 20px', borderTop: '1px solid hsla(280, 50%, 80%, 1)'}} key={role.title}>
+                            <div style={{margin: '5px 0'}}>
                                 <strong>{role.title}</strong>
                             </div>
-                            <div className="d-flex flex-wrap p-1">
+                            <div >
                                 {role.members.map(member => (
-                                    <div key={member} className="text-center" style={{margin: '2px 30px 12px 0'}}>
-                                        <div>{member.name}</div> 
-                                        <div style={{fontStyle: 'italic', fontWeight: '300'}}>{member.bio}</div>
+                                    <div key={member}>
+                                        <div>{member}</div> 
                                     </div>
                                 ))}
                             </div>
@@ -88,6 +180,7 @@ export default function PastBoardsPage() {
                     ))}
                 </div>
             ))}
+            </div>
         </div>
     )
 }

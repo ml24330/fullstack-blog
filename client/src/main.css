@@ -13,6 +13,10 @@ a:hover {
     color: var(--theme);
 }
 
+.post-title p {
+    margin-bottom: 0;
+}
+
 /*
     Navigation & Header styles
 */
@@ -35,7 +39,6 @@ a:hover {
 .header-banner {
     width: 100vw;
     height: calc(min(100vw,900px)/4);
-    margin-bottom: 30px;
     overflow: show;
     text-align: center;
     background-color: rgb(10,10,10);
@@ -209,6 +212,43 @@ a:hover {
     border-bottom: none;
 }
 
+.post-component .post-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.post-component .post {
+    flex: 3;
+    order: 2;
+}
+
+.post-component .post-icon-container {
+    flex: 1;
+    display: flex;
+    order: 3;
+}
+
+.post-component:nth-child(2n) > .post-icon-container {
+    order: 1;
+    transform: translateX(-20px);
+}
+
+.post-component:nth-child(2n+1) > .post-icon-container {
+    transform: translateX(5px);
+}
+
+@media (max-width: 600px) {
+    .post-component .post-icon {
+        display: none;
+    }
+
+    .post-component .post-icon-container {
+        flex: 0;
+    }
+}
+
 /*
     Paginator styles
 */
@@ -354,8 +394,31 @@ a:hover {
 }
 
 .post-container .post-img {
-    width: 80%;
-    margin: 15px;
+    width: 60%;
+    margin-top: 15px;
+}
+
+.post-container .post-img-caption {
+    margin-right: 20%;
+    text-align: right;
+    color: gray;
+    font-size: 1rem;
+}
+
+.page-author {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 50px 0;
+}
+
+.page-author img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.page-author .author {
+    text-align: right;
+    margin-right: 30px;
 }
 
 /*
@@ -415,4 +478,54 @@ a:hover {
 .award {
     margin-left: 10px;
     color:rgba(0, 0, 0, 0.7);
+}
+
+/*
+    First post styles
+*/
+
+.first-post-component .post {
+    width: min(95%, 1000px);
+    min-height: 190px;
+    padding: 0 30px;
+}
+
+.first-post-component .image {
+    height: 100%;
+    margin: 0 15px 15px 15px;
+}
+
+.first-post-component .image img {
+    height: 190px;
+}
+
+.first-post-component {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+}
+
+.first-post-component .post img {
+    height: 15px;
+    margin: 0 5px;
+}
+
+.first-post-component .post-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.first-post-component .post-excerpt {
+    font-size: 0.95rem;
+}
+
+.first-post-component > span {
+    color: gray;
 }

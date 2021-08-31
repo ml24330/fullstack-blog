@@ -41,7 +41,7 @@ export default function Author({ match, history }) {
             <div className="page-subheading"><img src={book} alt="posts" />{author.posts.length} {author.posts.length === 1 ? 'post' : 'posts'}</div>
             <div className="page-content">
             {author.posts.reverse().map(post => (
-                <PostComponent post={post} key={post.title} />
+                <PostComponent post={post} key={post.title} showImage={() => true} />
             ))}
             </div>
         </div>

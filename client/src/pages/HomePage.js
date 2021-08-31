@@ -4,6 +4,7 @@ import SidebarComponent from '../components/SidebarComponent'
 import Loading from '../components/Loading'
 import { Helmet } from 'react-helmet'
 import { API_URL } from '../config'
+import FirstPostComponent from '../components/FirstPostComponent'
 
 export default function HomePage() {
 
@@ -31,15 +32,18 @@ export default function HomePage() {
     }
 
     return (
-        <div className="home-container justify-content-center d-flex flex-wrap">
-            <Helmet>
-                <title>LSE Law Review Blog</title>
-            </Helmet>
-            <div>
-                <div className="section-title">Recent posts</div>
-                <PaginatorComponent objs={recentPosts} perPage={10}/>
+        <>
+            <FirstPostComponent post={recentPosts[0]} />
+            <div className="home-container justify-content-center d-flex flex-wrap">
+                <Helmet>
+                    <title>LSE Law Review Blog</title>
+                </Helmet>
+                <div>
+                    <div className="section-title">Recent posts</div>
+                    <PaginatorComponent objs={recentPosts.slice(1)} perPage={10} showImage={() => true} />
+                </div>
+                <SidebarComponent posts={popularPosts} />
             </div>
-            <SidebarComponent posts={popularPosts} />
-        </div>
+        </>
     )
 }
