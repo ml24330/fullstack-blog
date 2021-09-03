@@ -217,7 +217,11 @@ visitsRouter.patch('/inc/:id', async (req, res) => {
     }
 })
 
+/*
+    The /visitor router
+*/
 
+// CREATE new visitor record
 visitorRouter.post('/', async (req, res) => {
     try {
         const visitor = new Visitor({
@@ -233,6 +237,11 @@ visitorRouter.post('/', async (req, res) => {
     }
 })
 
+/*
+    The /images router
+*/
+
+// READ one image by slug
 imagesRouter.get('/:slug', async (req, res) => {
     try {
         const img = await Image.findOne({ slug: req.params.slug })

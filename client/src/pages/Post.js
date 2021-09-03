@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
+import Loading from '../components/Loading'
 import rehypeRaw from 'rehype-raw'
 import removeMd from 'remove-markdown'
 import readingTime from 'reading-time'
-import Loading from '../components/Loading'
 import { DiscussionEmbed } from 'disqus-react'
 import time from '../assets/images/time.svg'
+import placeholder from '../assets/images/placeholder.png'
 import { Helmet } from 'react-helmet'
 import { API_URL } from '../config'
-import placeholder from '../assets/images/placeholder.png'
+
 
 export default function Post({ match, history }) {
 

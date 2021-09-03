@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import PaginatorComponent from '../components/PaginatorComponent'
 import SidebarComponent from '../components/SidebarComponent'
+import FirstPostComponent from '../components/FirstPostComponent'
 import Loading from '../components/Loading'
 import { Helmet } from 'react-helmet'
 import { API_URL } from '../config'
-import FirstPostComponent from '../components/FirstPostComponent'
 
 export default function HomePage() {
 

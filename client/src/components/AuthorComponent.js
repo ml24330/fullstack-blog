@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
     CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
-  } from 'reactstrap'
+} from 'reactstrap'
 
 export default function AuthorComponent({ author }) {
 

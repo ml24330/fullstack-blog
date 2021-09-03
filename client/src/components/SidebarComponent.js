@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PaginatorComponent from './PaginatorComponent'
 import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import img1 from '../assets/images/Launch.png'
 import img2 from '../assets/images/img2.jpeg'
 import img3 from '../assets/images/img3.jpeg'

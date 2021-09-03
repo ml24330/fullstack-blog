@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import removeMd from 'remove-markdown'
 import readingTime from 'reading-time'
+import ReactMarkdown from 'react-markdown'
 import time from '../assets/images/time.svg'
 import { API_URL } from '../config'
-import ReactMarkdown from 'react-markdown'
 
 export default function PostComponent({ post: { _id, slug, title, author, authors, categories, category_override, content, date }, showImage }) {
 
