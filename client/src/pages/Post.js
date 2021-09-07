@@ -38,7 +38,7 @@ export default function Post({ match, history }) {
             }
 
             if(dat.authors.length > 0) {
-                for (const author of dat.authors.length) {
+                for (const author of dat.authors) {
                     const author_res = await fetch(`${API_URL}/authors/${author}`)
                     if(author_res.status === 200) {
                         const author_dat = await author_res.json()
