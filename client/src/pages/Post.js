@@ -37,13 +37,20 @@ export default function Post({ match, history }) {
                 setCaption(img_dat.caption)
             }
 
-            const _author = dat.author || dat.authors
-            for (const author of _author) {
-                const author_res = await fetch(`${API_URL}/authors/${author}`)
-                if(author_res.status === 200) {
-                    const author_dat = await author_res.json()
-                    setAuthor(prev => [...prev, author_dat])
+            if(dat.authors.length > 0) {
+                for (const author of dat.authors.length) {
+                    const author_res = await fetch(`${API_URL}/authors/${author}`)
+                    if(author_res.status === 200) {
+                        const author_dat = await author_res.json()
+                        setAuthor(prev => [...prev, author_dat])
+                    }
                 }
+            } else {
+                const author_res = await fetch(`${API_URL}/authors/${dat.author}`)
+                    if(author_res.status === 200) {
+                        const author_dat = await author_res.json()
+                        setAuthor([author_dat])
+                    }
             }
 
 
