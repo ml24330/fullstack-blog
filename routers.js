@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import sw from 'stopword'
+import resizeImg from 'resize-image-buffer'
 
 import { Post, Author, Visit, Visitor, Image } from './models.js'
 
@@ -13,16 +13,6 @@ const visitsRouter = express.Router()
 const visitorRouter = express.Router()
 const imagesRouter = express.Router()
 
-
-const slugify = (string) => {
-    return sw.removeStopwords(string.split(' ')).join(' ').toString().toLowerCase()
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-    .replace(/^-+/, '')             // Trim - from start of text
-    .replace(/-+$/, '');            // Trim - from end of text
-    console.log(slug)
-}
 
 /*
     The /posts router
@@ -245,9 +235,11 @@ visitorRouter.post('/', async (req, res) => {
 imagesRouter.get('/:slug', async (req, res) => {
     try {
         const img = await Image.findOne({ slug: req.params.slug })
-        if(!img) {
+        if(!img.image) {
             throw new Error('No documents found!')
         }
+        // const r = await resizeImg(img.image.data, {width: 100, height: 100})
+        // return res.json({...img, image: {...img.image, data: r}})
         return res.json(img)
     } catch(e) {
         console.log(`Error while indexing image: ${e}`)

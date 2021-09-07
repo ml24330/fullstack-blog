@@ -17,7 +17,7 @@ export default function Post({ match, history }) {
     const [post, setPost] = useState({})
     const [image, setImage] = useState()
     const [caption, setCaption] = useState()
-    const [author, setAuthor] = useState({})
+    const [author, setAuthor] = useState([])
     // const [visits, setVisits] = useState()
 
     useEffect(() => {
@@ -37,11 +37,15 @@ export default function Post({ match, history }) {
                 setCaption(img_dat.caption)
             }
 
-            const author_res = await fetch(`${API_URL}/authors/${dat.author}`)
-            if(author_res.status === 200) {
-                const author_dat = await author_res.json()
-                setAuthor(author_dat)
+            const _author = dat.author || dat.authors
+            for (const author of _author) {
+                const author_res = await fetch(`${API_URL}/authors/${author}`)
+                if(author_res.status === 200) {
+                    const author_dat = await author_res.json()
+                    setAuthor(prev => [...prev, author_dat])
+                }
             }
+
 
             // if(post.slug) {
             //     const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
@@ -55,7 +59,7 @@ export default function Post({ match, history }) {
             //     setVisits(post_dat.visits)
             // }   
         })()
-    }, [match.params.title, post.slug, history])
+    }, [])
 
     const renderDate = (date) => {
         const MONTHS = {0: 'January', 1: 'February', 2: 'March', 3: 'April', 4: 'May', 5: 'June', 6: 'July', 7: 'August', 8: 'September', 9: 'October', 10: 'November', 11: 'December'}
@@ -85,7 +89,7 @@ export default function Post({ match, history }) {
             <span> - </span>
             <span>{post.categories.map((category, idx) => (
                 <span key={category}>
-                    <span>{category}</span>
+                    <span><Link to={`/category/${category}`}>{category}</Link></span>
                     {idx+1 !== post.categories.length && <span> & </span>}
                 </span>
             ))}</span>
@@ -101,13 +105,15 @@ export default function Post({ match, history }) {
             <div className="page-content">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
             </div>
-            <div className="page-author">
-                <div className="author">
-                    <div><strong>{author.name}</strong></div>
-                    <div>{author.bio}</div>
+            {author.map(author => (
+                <div key={author.name} className="page-author">
+                    <div className="author">
+                        <div><strong>{author.name}</strong></div>
+                        <div>{author.bio}</div>
+                    </div>
+                    {author.image && author.image.data ? <div><img src={`data:image/png;base64,${new Buffer.from(author.image.data).toString('base64')}`} alt={author.name}></img></div> : <div><img src={placeholder} alt={author.name} /></div>}
                 </div>
-                {author.image && (author.image.data ? <div><img src={`data:image/png;base64,${new Buffer.from(author.image.data).toString('base64')}`} alt={author.name}></img></div> : <div><img src={placeholder} alt={author.name} /></div>)}
-            </div>
+            ))}
             <div>
                 <DiscussionEmbed
                     shortname='lse-law-review'

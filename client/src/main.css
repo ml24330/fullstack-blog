@@ -365,7 +365,8 @@ a:hover {
 
 .post-container .page-content {
     margin: 50px 0;
-    text-align: left;
+    text-align: justify;
+    text-align-last: inter-character;
 }
 
 .inline-reference {
