@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 import { authorsRouter, postsRouter, postRouter, visitsRouter, visitorRouter, imagesRouter } from './routers.js'
+import UArouter from './UArouter.js'
 
 dotenv.config()
 const PORT = process.env.PORT || 5000
@@ -25,12 +26,25 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+// app.use(function(req,res,next) {
+//     const ua = req.headers['user-agent']
+//     console.log(ua)
+
+//     if (/^(facebookexternalhit)|(Twitterbot)|(Pinterest)|(WhatsApp)/gi.test(ua)) {
+//       console.log(ua,' is a bot')
+//       UArouter(req, res, next)
+//     } else {
+//       next()
+//     }
+// })
 app.use('/api/authors', authorsRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/post', postRouter)
 app.use('/api/visits', visitsRouter)
 app.use('/api/visitor', visitorRouter)
 app.use('/api/images', imagesRouter)
+
+app.set('view engine', 'ejs')
 
 app.get('/sitemap', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'sitemap.xml'))

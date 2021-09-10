@@ -56,7 +56,7 @@ export default function HeaderComponent() {
     }
 
     return (
-        <React.Fragment>
+        <>
             <div>
                 <Modal isOpen={modalIsOpen} toggle={toggleModal}>
                     <ModalHeader toggle={toggleModal}>Found {results.length} {results.length === 1 ? 'post' : 'posts'} containing '{query}'</ModalHeader>
@@ -136,6 +136,6 @@ export default function HeaderComponent() {
             <div className="header-banner">
                 <Link to="/"><img src={header} alt="header" /></Link>
             </div>
-        </React.Fragment>
+        </>
     )
 }

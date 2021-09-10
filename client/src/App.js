@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import './main.css'
+import './override.css'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import SponsorsPage from './pages/SponsorsPage'
@@ -34,33 +37,33 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      <div className="App">
+    <>
+      <Router>
         <HeaderComponent />
         <ScrollToTop />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/404" exact component={NotFoundPage} />
-          <Route path="/about" exact component={AboutPage} />
-          <Route path="/pastboards" exact component={PastBoardsPage} />
-          <Route path="/sponsors" exact component={SponsorsPage} />
-          <Route path="/partners" exact component={PartnersPage} />
-          <Route path="/authors" exact component={AuthorsPage} />
-          <Route path="/author/:name" exact component={Author} />
-          <Route path="/prizewinners" exact component={PrizesPage} />
-          <Route path="/category/:cat" exact component={CategoryPage} />
-          <Route path="/submissions" exact component={SubmissionsPage} />
-          <Route path="/privacy" exact component={PrivacyPage} />
-          <Route path="/:year/:month/:title" exact component={Post} />
-          <Route path="/">
-            <Redirect
-              to={`/404?from=${window.location.href}`}
-            />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/404" exact component={NotFoundPage} />
+            <Route path="/about" exact component={AboutPage} />
+            <Route path="/pastboards" exact component={PastBoardsPage} />
+            <Route path="/sponsors" exact component={SponsorsPage} />
+            <Route path="/partners" exact component={PartnersPage} />
+            <Route path="/authors" exact component={AuthorsPage} />
+            <Route path="/author/:name" exact component={Author} />
+            <Route path="/prizewinners" exact component={PrizesPage} />
+            <Route path="/category/:cat" exact component={CategoryPage} />
+            <Route path="/submissions" exact component={SubmissionsPage} />
+            <Route path="/privacy" exact component={PrivacyPage} />
+            <Route path="/:year/:month/:title" exact component={Post} />
+            <Route path="/">
+              <Redirect
+                to={`/404?from=${window.location.href}`}
+              />
+            </Route>
+          </Switch>
         <FooterComponent />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 }
 

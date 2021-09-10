@@ -19,7 +19,7 @@ export default function AuthorComponent({ author }) {
                 setImage(image.default)
             }
         })()
-    }, [author.image.data])
+    }, [])
 
     return (
         <div className="author-card card" body>
