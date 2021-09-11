@@ -1,6 +1,5 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import resizeImg from 'resize-image-buffer'
 
 import { Post, Author, Visit, Visitor, Image } from './models.js'
 
@@ -231,16 +230,45 @@ visitorRouter.post('/', async (req, res) => {
     The /images router
 */
 
-// READ one image by slug
-imagesRouter.get('/:slug', async (req, res) => {
+// READ one post image caption by slug
+imagesRouter.get('/caption/:slug', async (req, res) => {
     try {
         const img = await Image.findOne({ slug: req.params.slug })
         if(!img.image) {
             throw new Error('No documents found!')
         }
-        // const r = await resizeImg(img.image.data, {width: 100, height: 100})
-        // return res.json({...img, image: {...img.image, data: r}})
-        return res.json(img)
+        const caption = img.caption
+        res.json({caption})
+    } catch(e) {
+        console.log(`Error while indexing image caption: ${e}`)
+        return res.status(400).json('An error has occurred!')
+    }
+})
+
+// READ one post image by slug
+imagesRouter.get('/post/:slug', async (req, res) => {
+    try {
+        const img = await Image.findOne({ slug: req.params.slug })
+        if(!img.image || !img.image.data) {
+            throw new Error('No documents found!')
+        }
+        const data = Buffer.from(img.image.data, 'base64');
+        res.end(data)
+    } catch(e) {
+        console.log(`Error while indexing image: ${e}`)
+        return res.status(400).json('An error has occurred!')
+    }
+})
+
+// READ one author image by slug
+imagesRouter.get('/author/:name', async (req, res) => {
+    try {
+        const img = await Author.findOne({ name: req.params.name })
+        if(!img.image || !img.image.data) {
+            throw new Error('No documents found!')
+        }
+        const data = Buffer.from(img.image.data, 'base64');
+        res.end(data)
     } catch(e) {
         console.log(`Error while indexing image: ${e}`)
         return res.status(400).json('An error has occurred!')

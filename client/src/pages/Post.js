@@ -30,12 +30,12 @@ export default function Post({ match, history }) {
             const dat = await res.json()
             setPost(dat)
 
-            const img_res = await fetch(`${API_URL}/images/${dat.slug}`)
+            const img_res = await fetch(`${API_URL}/images/post/${dat.slug}`)
             if(img_res.status === 200) {
-                const img_dat = await img_res.json()
-                const img = new Buffer.from(img_dat.image.data).toString('base64')
-                setImage(`data:image/png;base64,${img}`)
-                setCaption(img_dat.caption)
+                const caption_res = await fetch(`${API_URL}/images/caption/${dat.slug}`)
+                const { caption } = await caption_res.json() 
+                setImage(`${API_URL}/images/post/${dat.slug}`)
+                setCaption(caption)
             }
 
             if(dat.authors.length > 0) {
@@ -84,26 +84,6 @@ export default function Post({ match, history }) {
 
     return (
         <div className="post-container">
-            <ReactSEOMetaTags
-                render={el => <Helmet>{el}</Helmet>}
-                website={{
-                    url: 'https://google.com/about',
-                    title:  'This is a 70 character long title with a lot of padding to make it so!',
-                    datePublished: '2019-10-06T13:56:03.123Z',
-                    description: 'This is a 200 character long description of this web page which is quite interesting and which describes its contents well with a lot of relevant keywords and isn\'t just general marketing mumbo-jumbo.',
-                    language: 'en-US',
-                    image: 'http://website.com/image.png',
-                    author: {
-                      email: 'person@gmail.com',
-                      name: 'John Smith',
-                      image: 'http://john.me/my-face.jpg',
-                    },
-                    site: {
-                      siteName: 'IMDb',
-                      searchUrl: 'https://www.google.com/search?q=',
-                    }
-                }}
-            />
             {post.author && <span className="post-author"><Link to={`/author/${post.author}`}>{post.author} </Link></span>}
             {post.authors.length !== 0 && <span className="post-author">{post.authors.map((author, idx) => (
                 <span key={author}>
