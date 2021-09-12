@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import removeMd from 'remove-markdown'
 import readingTime from 'reading-time'
+import ReactMarkdown from 'react-markdown'
 import time from '../assets/images/time.svg'
 import { API_URL } from '../config'
 
@@ -40,7 +41,7 @@ export default function FirstPostComponent({ post: { slug, title, author, author
                         {idx+1 !== categories.length && <span> & </span>}
                     </span>
                 ))}</div>
-                <div className="post-title"><Link to={`/${new Date(date).getFullYear()}/${('0' + (new Date(date).getMonth() + 1)).slice(-2)}/${slug}`}>{title}</Link></div>
+                <div className="post-title"><Link to={`/${new Date(date).getFullYear()}/${('0' + (new Date(date).getMonth() + 1)).slice(-2)}/${slug}`}><ReactMarkdown>{title}</ReactMarkdown></Link></div>
                 <div className="post-date">{renderDate(date)}</div>
                 {author && <span className="post-author"><Link to={`/author/${author}`}>{author} </Link></span>}
                 {authors.length !== 0 && <span className="post-author">{authors.map((author, idx) => (

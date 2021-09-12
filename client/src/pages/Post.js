@@ -9,7 +9,6 @@ import { DiscussionEmbed } from 'disqus-react'
 import time from '../assets/images/time.svg'
 import placeholder from '../assets/images/placeholder.png'
 import { Helmet } from 'react-helmet'
-import { ReactSEOMetaTags } from 'react-seo-meta-tags'
 import { API_URL } from '../config'
 
 
@@ -84,6 +83,9 @@ export default function Post({ match, history }) {
 
     return (
         <div className="post-container">
+            <Helmet>
+                <title>{post.title}</title>
+            </Helmet>
             {post.author && <span className="post-author"><Link to={`/author/${post.author}`}>{post.author} </Link></span>}
             {post.authors.length !== 0 && <span className="post-author">{post.authors.map((author, idx) => (
                 <span key={author}>
