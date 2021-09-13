@@ -1,5 +1,7 @@
 import express from 'express'
 import removeMd from 'remove-markdown'
+import html2unicode from 'html2unicode'
+import marked from 'marked'
 
 import { Post, Author } from './models.js'
 
@@ -54,7 +56,7 @@ UArouter.get('*', async (req, res) => {
         const slug = req.url.match(/\/\d{4}\/\d{2}\/([A-Z0-9\-]+)/i)[1]
         const post = await findPost(slug)
         if(post !== null) {
-            title = removeMd(post.title)
+            title = await genTitle(post.title)
             description = removeMd(post.content).slice(0,200)
             image = `https://blog.lselawreview.com/api/images/post/${post.slug}`
         }
@@ -95,6 +97,12 @@ const findPost = async (slug) => {
     } 
 
     return post
+}
+
+const genTitle = async (title) => {
+   const html = marked(title)
+   const unicode = await html2unicode.html2unicode(html)
+   return unicode
 }
 
 export default UArouter
