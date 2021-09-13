@@ -1,7 +1,7 @@
 import express from 'express'
 import removeMd from 'remove-markdown'
 
-import { Post, Author, Image } from './models.js'
+import { Post, Author } from './models.js'
 
 const UArouter = express.Router()
 
@@ -54,7 +54,7 @@ UArouter.get('*', async (req, res) => {
         const slug = req.url.match(/\/\d{4}\/\d{2}\/([A-Z0-9\-]+)/i)[1]
         const post = await findPost(slug)
         if(post !== null) {
-            title = post.title
+            title = removeMd(post.title)
             description = removeMd(post.content).slice(0,200)
             image = `https://blog.lselawreview.com/api/images/post/${post.slug}`
         }
