@@ -4,6 +4,7 @@ import Cambridge from '../assets/images/cambridge-law-review.png'
 import DeLege from '../assets/images/de-lege-ferenda-cambridge-law-review.png'
 import Exeter from '../assets/images/exeter-law-review.png'
 import Glasgow from '../assets/images/glasgow-law-review.png'
+import hkjls from '../assets/images/hkjls.jpeg'
 import HULR from '../assets/images/HULR.png'
 import Kings from '../assets/images/kings-student-law-review.png'
 import Oxford from '../assets/images/oxford-university-undergraduate-law-journal.png'
@@ -51,6 +52,13 @@ export default function PartnersPage() {
             <img className="img-small" src={HULR} alt="harvard" />
             <p class="mb-4">The Harvard Undergraduate Law Review (HULR) is a student-run organisation at Harvard College that is dedicated to providing undergraduates with an opportunity to learn about the field of law and the career options it provides. It aims to educate Harvard undergraduates interested in pursuing law by encouraging lively, scholarly debate on a wide variety of legal topics. As the only legal publication on campus, it has a broad audience that is eager to participate in world-class discussion of legal issues and learn from the resources that the publication offers. </p>
             <p class="mb-0">Learn more: <a href="https://hulr.org" target="_blank" rel="noopener noreferrer">hulr.org</a></p>
+            <br />
+
+            <h5 class="page-heading-small">Hong Kong Journal of Legal Studies</h5>
+            <img className="img-small" src={hkjls} alt="harvard" />
+            <p class="mb-4">Founded in 1994, the Hong Kong Journal of Legal Studies (HKJLS) is the oldest student-run academic law journal in Hong Kong covering legal issues in Hong Kong, Greater China and the Asia Pacific. Its Editorial Board is constituted by Hong Kong University Law students, who are solely responsible for the editing, management and publishing of the journal. Since its inception, the HKJLS has striven to deliver diverse insights in fields ranging from doctrinal and jurisprudential analysis of core common law, to comparative, empirical and interdisciplinary inquiries into a wide variety of public and private law issues.</p>
+            <p class="mb-0">Learn more: <a href="https://hkjls.law.hku.hk" target="_blank" rel="noopener noreferrer">hkjls.law.hku.hk</a></p>
+            <p>Enquiries: <a href="mailto:hkjls@hku.hk">hkjls@hku.hk</a></p>
             <br />
 
             <h5 class="page-heading-small">King's Student Law Review</h5>
