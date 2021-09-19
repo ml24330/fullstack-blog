@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import fs from 'fs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -48,6 +49,15 @@ app.set('view engine', 'ejs')
 
 app.get('/sitemap', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'sitemap.xml'))
+})
+
+app.get('/file/:name', (req, res) => {
+    const file = path.join(__dirname, 'public', req.params.name)
+    if(fs.existsSync(file)) {
+        res.download(file)
+    } else {
+        res.status(404).send('File does not exist!')
+    }
 })
 
 if(process.env.NODE_ENV === 'production'){

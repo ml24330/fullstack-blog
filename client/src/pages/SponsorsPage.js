@@ -16,7 +16,7 @@ export default function SponsorsPage() {
             </td>
             <p class="mb-4">The LSE Law Review is proud to be sponsored by 3 Verulam Buildings. 3 Verulam Buildings is one of the UK’s principal sets of barristers’ chambers, with over 80 members specialising in a wide range of commercial law and practising both nationally, in other countries’ jurisdictions and internationally.</p> 
             <p class="mb-4">3 Verulam Buildings will be holding a virtual Student Open Day via Zoom on Wednesday, 6 October 2021 from 1:30 - 3:30pm. Members of 3VB will provide a true insight into a life as a barrister, give advice on applying for pupillage and discuss areas of commercial work.</p> 
-            {/* <p class="mb-4">You can download the event brochure <a className="underline" target="_blank" rel="noopener noreferrer" href="#">here</a>. Click <a className="underline" target="_blank" rel="noopener noreferrer" href="https://us02web.zoom.us/webinar/register/WN_Iiqy-4TsSFWqwF-b9Em67Q">here</a> to register for the event.</p>  */}
+            <p class="mb-4">You can download the event brochure <a className="underline" href="/file/3vb.pdf">here</a>. Click <a className="underline" target="_blank" rel="noopener noreferrer" href="https://us02web.zoom.us/webinar/register/WN_Iiqy-4TsSFWqwF-b9Em67Q">here</a> to register for the event.</p> 
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.3vb.com"> www.3vb.com </a> </p>
             
             <br/>
