@@ -219,9 +219,9 @@ a:hover {
 
 .post-component .post-icon {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    height: auto;
     margin: auto;
+    border-radius: 20%;
 }
 
 .post-component .post {
@@ -233,6 +233,10 @@ a:hover {
     flex: 1;
     display: flex;
     order: 3;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: auto;
 }
 
 .post-component:nth-child(2n) > .post-icon-container {
