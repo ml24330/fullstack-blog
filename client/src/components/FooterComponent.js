@@ -12,7 +12,7 @@ export default function FooterComponent() {
             <div className="container p-4">
                 <div id="subscribe">
                     <div className="footer-title">Subscribe to the Newsletter</div>
-                    <form action="https://gmail.us4.list-manage.com/subscribe/post?u=1c43ace496ccffe53f6755bf0&amp;id=f0850829d5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
+                    <form action="https://gmail.us7.list-manage.com/subscribe/post?u=11f531cbed523a2ee61c1edf3&id=e9a2f67ae2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
                         <div className="row">
                             <div className="col-md-6 p-1">
                                 <input className="form-control" type="email" name="EMAIL" id="mce-EMAIL" placeholder="E-mail Address" required />

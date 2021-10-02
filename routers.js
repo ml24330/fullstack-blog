@@ -248,12 +248,12 @@ imagesRouter.get('/caption/:slug', async (req, res) => {
 // READ one post image by slug
 imagesRouter.get('/post/:slug', async (req, res) => {
     try {
-        const img = await Image.findOne({ slug: req.params.slug })
-        if(!img.image || !img.image.data) {
+        const img = await Image.find()
+        if(!img[0].image || !img[0].image.data) {
             throw new Error('No documents found!')
         }
-        const data = Buffer.from(img.image.data, 'base64');
-        res.end(data)
+        const data = Buffer.from(img[0].image.data, 'base64')
+        return res.end(data)
     } catch(e) {
         console.log(`Error while indexing image: ${e}`)
         return res.status(400).json('An error has occurred!')
