@@ -12,6 +12,8 @@ const __dirname = dirname(__filename)
 import { authorsRouter, postsRouter, postRouter, visitsRouter, visitorRouter, imagesRouter } from './routers.js'
 import UArouter from './UArouter.js'
 
+// import { Post, Author, Visit, Visitor, Image } from './models.js'
+
 dotenv.config()
 const PORT = process.env.PORT || 5000
 
