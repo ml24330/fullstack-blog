@@ -117,7 +117,7 @@ export default function Post({ match, history }) {
                         <div><strong>{author.name}</strong></div>
                         <div>{author.bio}</div>
                     </div>
-                    {author.image && author.image.data ? <div><img src={`data:image/png;base64,${new Buffer.from(author.image.data).toString('base64')}`} alt={author.name}></img></div> : <div><img src={placeholder} alt={author.name} /></div>}
+                    {author.image ? <div><img src={author.image} alt={author.name}></img></div> : <div><img src={placeholder} alt={author.name} /></div>}
                 </div>
             ))}
             <div>

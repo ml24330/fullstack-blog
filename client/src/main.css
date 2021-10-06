@@ -427,6 +427,16 @@ a:hover {
     margin-right: 30px;
 }
 
+@media (max-width: 960px) {
+    .post-container .post-img {
+        width: 90%;
+    }
+    
+    .post-container .post-img-caption {
+        margin-right: 5%;
+    }
+}
+
 /*
     Author styles
 */

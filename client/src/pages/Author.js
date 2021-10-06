@@ -8,7 +8,6 @@ import { API_URL } from '../config'
 export default function Author({ match, history }) {
 
     const [author, setAuthor] = useState({posts: []})
-    const [image, setImage] = useState()
 
     useEffect(() => {
         (async () => {
@@ -18,10 +17,6 @@ export default function Author({ match, history }) {
             }
             const dat = await res.json()
             setAuthor(dat)
-            if(dat.image.data) {
-                const img = new Buffer.from(dat.image.data).toString('base64')
-                setImage(`data:image/png;base64,${img}`)
-            }
         })()
     }, [match.params.name, history])
 
@@ -34,7 +29,7 @@ export default function Author({ match, history }) {
             <Helmet>
                 <title>{author.name}</title>
             </Helmet>
-            {image && <img className="avatar" src={image} alt={author.name} />} 
+            {author.image && <img className="avatar" src={author.image} alt={author.name} />} 
             <div className="page-heading">{author.name}</div>
             <div className="author-category">{author.category === 'editor' ? 'Editor' : author.category === 'contributor' ? 'Contributor' : author.category}</div>
             <div className="page-subheading">{author.bio}</div>

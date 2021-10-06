@@ -50,7 +50,7 @@ UArouter.get('*', async (req, res) => {
         if(author !== null) {
             title = author.name
             description = author.bio
-            image = `https://blog.lselawreview.com/api/images/author/${author.name}`
+            image = `https://res.cloudinary.com/dv6qbaj7u/image/upload/v1633512635/${author.name.replace(' ', '-')}`
         }
     } else if(/\/\d{4}\/\d{2}\/[A-Z]+/gi.test(req.url)) {
         const slug = req.url.match(/\/\d{4}\/\d{2}\/([A-Z0-9\-]+)/i)[1]
