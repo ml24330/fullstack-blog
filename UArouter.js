@@ -45,7 +45,7 @@ UArouter.get('*', async (req, res) => {
             break
     }
     if(/\/author\/[A-Z]+/gi.test(req.url)) {
-        const name = req.url.replaceAll('%20', ' ').match(/\/author\/([A-Z\s]+)/i)
+        const name = req.url.replace('%20', ' ').match(/\/author\/([A-Z\s]+)/i)
         const author = await findAuthor(name)
         if(author !== null) {
             title = author.name
