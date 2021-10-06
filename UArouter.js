@@ -58,7 +58,7 @@ UArouter.get('*', async (req, res) => {
         if(post !== null) {
             title = await genTitle(post.title)
             description = removeMd(post.content).slice(0,200)
-            image = `https://blog.lselawreview.com/api/images/post/${post.slug}`
+            image = `https://res.cloudinary.com/dv6qbaj7u/image/upload/v1633512635/${post.slug}`
         }
     }
     res.render('bot', {
