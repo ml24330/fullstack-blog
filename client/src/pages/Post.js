@@ -31,10 +31,9 @@ export default function Post({ match, history }) {
 
             const img_res = await fetch(`${API_URL}/images/post/${dat.slug}`)
             if(img_res.status === 200) {
-                const caption_res = await fetch(`${API_URL}/images/caption/${dat.slug}`)
-                const { caption } = await caption_res.json() 
-                setImage(`${API_URL}/images/post/${dat.slug}`)
-                setCaption(caption)
+                const img_dat = await img_res.json()
+                setImage(img_dat.url)
+                setCaption(img_dat.caption)
             }
 
             if(dat.authors.length > 0) {

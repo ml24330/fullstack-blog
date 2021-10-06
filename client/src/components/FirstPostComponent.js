@@ -12,9 +12,10 @@ export default function FirstPostComponent({ post: { slug, title, author, author
 
     useEffect(() => {
         (async () => {
-            const img_res = await fetch(`${API_URL}/images/post/${slug}`)
-            if(img_res.status === 200) {
-                setImage(`${API_URL}/images/post/${slug}`)
+            const res = await fetch(`${API_URL}/images/post/${slug}`)
+            if(res.status === 200) {
+                const dat = await res.json()
+                setImage(dat.url)
             }
         })()
     })

@@ -234,7 +234,7 @@ visitorRouter.post('/', async (req, res) => {
 imagesRouter.get('/caption/:slug', async (req, res) => {
     try {
         const img = await Image.findOne({ slug: req.params.slug })
-        if(!img.image) {
+        if(!img) {
             throw new Error('No documents found!')
         }
         const caption = img.caption
@@ -248,12 +248,11 @@ imagesRouter.get('/caption/:slug', async (req, res) => {
 // READ one post image by slug
 imagesRouter.get('/post/:slug', async (req, res) => {
     try {
-        const img = await Image.find()
-        if(!img[0].image || !img[0].image.data) {
+        const img = await Image.findOne({slug: req.params.slug})
+        if(!img) {
             throw new Error('No documents found!')
         }
-        const data = Buffer.from(img[0].image.data, 'base64')
-        return res.end(data)
+        return res.json(img)
     } catch(e) {
         console.log(`Error while indexing image: ${e}`)
         return res.status(400).json('An error has occurred!')
@@ -263,11 +262,11 @@ imagesRouter.get('/post/:slug', async (req, res) => {
 // READ one author image by slug
 imagesRouter.get('/author/:name', async (req, res) => {
     try {
-        const img = await Author.findOne({ name: req.params.name })
-        if(!img.image || !img.image.data) {
+        const aut = await Author.findOne({ name: req.params.name })
+        if(!aut.image || !aut.image.data) {
             throw new Error('No documents found!')
         }
-        const data = Buffer.from(img.image.data, 'base64');
+        const data = Buffer.from(aut.image.data, 'base64');
         res.end(data)
     } catch(e) {
         console.log(`Error while indexing image: ${e}`)

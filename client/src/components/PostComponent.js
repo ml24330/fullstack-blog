@@ -15,7 +15,8 @@ export default function PostComponent({ post: { _id, slug, title, author, author
             (async () => {
                 const res = await fetch(`${API_URL}/images/post/${slug}`)
                 if(res.status === 200) {
-                    setImage(`${API_URL}/images/post/${slug}`)
+                    const dat = await res.json()
+                    setImage(dat.url)
                 }
             })()
         }
