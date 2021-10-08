@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.e94419e0.chunk.css",
-    "main.js": "/static/js/main.4b63abed.chunk.js",
-    "main.js.map": "/static/js/main.4b63abed.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.667e48d6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.667e48d6.js.map",
+    "main.css": "/static/css/main.15a5d277.chunk.css",
+    "main.js": "/static/js/main.749f8398.chunk.js",
+    "main.js.map": "/static/js/main.749f8398.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.18eeda4f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.18eeda4f.js.map",
     "static/css/2.3051a125.chunk.css": "/static/css/2.3051a125.chunk.css",
-    "static/js/2.6d692a34.chunk.js": "/static/js/2.6d692a34.chunk.js",
-    "static/js/2.6d692a34.chunk.js.map": "/static/js/2.6d692a34.chunk.js.map",
-    "static/js/3.3f29320a.chunk.js": "/static/js/3.3f29320a.chunk.js",
-    "static/js/3.3f29320a.chunk.js.map": "/static/js/3.3f29320a.chunk.js.map",
+    "static/js/2.42c0cdb4.chunk.js": "/static/js/2.42c0cdb4.chunk.js",
+    "static/js/2.42c0cdb4.chunk.js.map": "/static/js/2.42c0cdb4.chunk.js.map",
+    "static/js/3.ddbb7db7.chunk.js": "/static/js/3.ddbb7db7.chunk.js",
+    "static/js/3.ddbb7db7.chunk.js.map": "/static/js/3.ddbb7db7.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.3051a125.chunk.css.map": "/static/css/2.3051a125.chunk.css.map",
-    "static/css/main.e94419e0.chunk.css.map": "/static/css/main.e94419e0.chunk.css.map",
-    "static/js/2.6d692a34.chunk.js.LICENSE.txt": "/static/js/2.6d692a34.chunk.js.LICENSE.txt",
+    "static/css/main.15a5d277.chunk.css.map": "/static/css/main.15a5d277.chunk.css.map",
+    "static/js/2.42c0cdb4.chunk.js.LICENSE.txt": "/static/js/2.42c0cdb4.chunk.js.LICENSE.txt",
     "static/media/3VB.0e9c1f0c.jpg": "/static/media/3VB.0e9c1f0c.jpg",
     "static/media/HULR.4451ce65.png": "/static/media/HULR.4451ce65.png",
     "static/media/Launch.8a4535af.jpg": "/static/media/Launch.8a4535af.jpg",
@@ -44,10 +44,10 @@
     "static/media/trinity-college-law-review.601da894.png": "/static/media/trinity-college-law-review.601da894.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.667e48d6.js",
+    "static/js/runtime-main.18eeda4f.js",
     "static/css/2.3051a125.chunk.css",
-    "static/js/2.6d692a34.chunk.js",
-    "static/css/main.e94419e0.chunk.css",
-    "static/js/main.4b63abed.chunk.js"
+    "static/js/2.42c0cdb4.chunk.js",
+    "static/css/main.15a5d277.chunk.css",
+    "static/js/main.749f8398.chunk.js"
   ]
 }

@@ -64,6 +64,11 @@ a:hover {
     transform: translateX(-30px) translateY(-2px);
 }
 
+.nav-search input {
+    width: 190px;
+    padding-right: 30px;
+}
+
 @media (max-width: 600px) {
 
     .header-title {

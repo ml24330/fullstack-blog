@@ -1,5 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import readingTime from 'reading-time'
+import removeMd from 'remove-markdown'
 
 import { Post, Author, Visit, Visitor, Image } from './models.js'
 
@@ -27,7 +29,8 @@ postsRouter.get('/', async (req, res) => {
             authors: 1,
             date: 1,
             categories: 1,
-            content: { $substr: ['$content', 0, 1100] }
+            content: { $substrCP: ['$content', 0, 1100] },
+            length: { $strLenCP: '$content' }
         }}])
         return res.json(posts)
     } catch(e) {
@@ -43,14 +46,37 @@ postsRouter.get('/search/:query(*)', async (req, res) => {
         if(!query) {
             throw new Error('Invalid query string!')
         }
-        const posts = await Post.find({ $or: [
-            { title: { '$regex': query, '$options': 'i' } },
-            { author: { '$regex': query, '$options': 'i' } },
-            { authors: { '$regex': query, '$options': 'i' } },
-            { categories: { '$regex': query, '$options': 'i' } },
-            { content: { '$regex': query, '$options': 'i' } },
-            { title: { '$regex': query, '$options': 'i' } }
-        ] })
+        const posts = await Post.aggregate([
+            { $match: { 
+                '$or': [
+                    { title: { '$regex': query, '$options': 'i' } },
+                    { author: { '$regex': query, '$options': 'i' } },
+                    { authors: { '$regex': query, '$options': 'i' } },
+                    { categories: { '$regex': query, '$options': 'i' } },
+                    { content: { '$regex': query, '$options': 'i' } },
+                    { title: { '$regex': query, '$options': 'i' } }
+                ]
+            } },
+            { $project: {
+                title: 1,
+                slug: 1,
+                author: 1,
+                authors: 1,
+                date: 1,
+                categories: 1,
+                content: { $substrCP: ['$content', 0, 300] },
+                length: { $strLenCP: '$content' }
+            }}
+        ])
+        console.log(posts)
+        // const posts = await Post.find({ $or: [
+        //     { title: { '$regex': query, '$options': 'i' } },
+        //     { author: { '$regex': query, '$options': 'i' } },
+        //     { authors: { '$regex': query, '$options': 'i' } },
+        //     { categories: { '$regex': query, '$options': 'i' } },
+        //     { content: { '$regex': query, '$options': 'i' } },
+        //     { title: { '$regex': query, '$options': 'i' } }
+        // ] })
         return res.json(posts)
     } catch(e) {
         console.log(`Error while searching posts using query ${req.params.query}: ${e}`)

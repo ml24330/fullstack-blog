@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import removeMd from 'remove-markdown'
-import readingTime from 'reading-time'
 import ReactMarkdown from 'react-markdown'
 import time from '../assets/images/time.svg'
 import { API_URL } from '../config'
 
-export default function FirstPostComponent({ post: { slug, title, author, authors, categories, category_override, content, date }}) {
+export default function FirstPostComponent({ post: { length, slug, title, author, authors, categories, category_override, content, date }}) {
     
     const [image, setImage] = useState()
 
@@ -51,7 +50,7 @@ export default function FirstPostComponent({ post: { slug, title, author, author
                         {idx+1 !== authors.length && <span> & </span>}
                     </span>
                 ))}</span>}
-                <span className="post-time"><img src={time} alt="time" />{Math.ceil(readingTime(removeMd(content).split('[1]')[0], { wordsPerMinute: 250 }).minutes)} min read</span>
+                {/* <span className="post-time"><img src={time} alt="time" />{Math.ceil(length/2400)} min read</span> */}
                 <div className="post-excerpt">{removeMd(content).slice(0,400)}...</div>
             </div>
         </div>
