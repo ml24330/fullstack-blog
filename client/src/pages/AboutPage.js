@@ -31,7 +31,7 @@ export default function AboutPage() {
             <img className="img-large" style={{ marginLeft: 0 }} src={Map} alt="map" />
             <p>LSE, Houghton Street, London, WC2A 2AE, United Kingdom</p>
 
-            <p> For any enquiries, please contact us at <a href="mailto:lselawreview@gmail.com">lselawreview@gmail.com</a>.</p>
+            <p> For any enquiries, please contact us at <a href="mailto:editorialteam@lselawreview.com">editorialteam@lselawreview.com</a>.</p>
 
         </div>
     )
