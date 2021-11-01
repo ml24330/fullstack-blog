@@ -1,6 +1,7 @@
 import React from 'react'
 import Bristol from '../assets/images/bristol-law-review.png'
 import Cambridge from '../assets/images/cambridge-law-review.png'
+import CULR from '../assets/images/CULR.png'
 import DeLege from '../assets/images/de-lege-ferenda-cambridge-law-review.png'
 import Exeter from '../assets/images/exeter-law-review.png'
 import Glasgow from '../assets/images/glasgow-law-review.png'
@@ -32,6 +33,13 @@ export default function PartnersPage() {
             <p class="mb-4">The Cambridge Law Review (CLR) is an independent academic journal run by students of the University of Cambridge which aims to provide a forum for the discussion of contemporary and cutting-edge legal issues. We welcome contemporary submissions on issues relating to all common law jurisdictions, or those with a former connection to the English common law; European law; international law; comparative pieces; as well as interdisciplinary legal scholarship that has regard to economics and political studies. We do consider purely jurisprudential or historical pieces on a case-by-case basis. Despite being a journal run by students of English law, we do not evince a preference for submissions relating to English law; our most important criteria for publication is that your submission relates to a contemporary legal issue and provides critical insight into the area of law you have chosen.</p>
             <p class="mb-0">Learn More: <a href="https://www.cambridgelawreview.org" target="_blank" rel="noopener noreferrer">www.cambridgelawreview.org</a></p>
             <p>Enquiries: <a href="mailto:contact@cambridgelawreview.org">contact@cambridgelawreview.org</a></p>
+            <br />
+
+            <h5 class="page-heading-small">Columbia Undergraduate Law Review</h5>
+            <img className="img-small" src={CULR} alt="CULR" />
+            <p class="mb-4">The Columbia Undergraduate Law Review (CULR) is Columbia University's premier undergraduate legal publication. CULR publishes long-form pieces by undergraduate students from across the globe in its print journal as well as original pieces by Columbia/Barnard students in its online journal. The goal of CULR is to provide Columbia University and the public with opportunities for the discussion of law-related ideas and the publication of undergraduate legal scholarship.</p>
+            <p class="mb-0">Learn more: <a href="https://www.culawreview.org" target="_blank" rel="noopener noreferrer">www.culawreview.org</a></p>
+            <p>Enquiries: <a href="mailto:culreboard@columbia.edu">culreboard@columbia.edu</a></p>
             <br />
 
             <h5 class="page-heading-small">De Lege Ferenda (Cambridge Law Review)</h5>
