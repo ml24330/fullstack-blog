@@ -74,10 +74,6 @@ export default function SponsorsPage() {
             </Collapse>
         
             <p class="h4 mb-4">Other events:</p>
-
-            <Collapse title={<><strong>Virtual Panel Presentations</strong>: 5th, 12th and 19th October 2021</>}>
-                <p class="mb-4">You’ll get an insight into life at Freshfields and will hear from a partner, associate and a trainee about their own personal experiences. Graduate recruitment will also talk about the application process for the training contract and other programmes. You’ll have the opportunity to ask questions too. We don’t require an application.</p>
-            </Collapse>
         
             <Collapse title={<><strong>Freshfields’ Focus</strong>: Every Tuesday in November</>}>
                 <p class="mb-2">Sign up to our virtual Freshfields focus events for November 2021 to learn about different aspects of life at Freshfields, including pro bono, our diversity and inclusion team, our technology and innovation team and our trainees. We don't require an application for these events.</p>
