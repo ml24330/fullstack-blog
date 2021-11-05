@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('https://extreme-ip-lookup.com/json/')
+      const res = await fetch('https://extreme-ip-lookup.com/json/?key=OXkfSDJP4FgvOSdueaVn')
       const { country } = await res.json()
       await fetch(`${API_URL}/visitor`, {
         method: 'POST',
