@@ -569,7 +569,7 @@ a:hover {
     margin-right: 5px;
 }
 
-.active:before {
+._active:before {
     content: '\02796'; /* Unicode character for "minus" sign (-) */
     font-size: inherit;
     color: white;

@@ -6,7 +6,7 @@ export default function Collapse({ title, children }) {
 
     return (
         <>
-            <p className={`_collapse ${isOpen ? "active" : "inactive"}`} onClick={() => setIsOpen(isOpen => !isOpen)}>{title}</p>
+            <p className={`_collapse ${isOpen ? "_active" : "inactive"}`} onClick={() => setIsOpen(isOpen => !isOpen)}>{title}</p>
             {isOpen && children}
         </>
     )
