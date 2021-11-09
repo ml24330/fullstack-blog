@@ -8,7 +8,8 @@ export default function SubmissionsPage() {
                 <title>Submission Guidelines</title>
             </Helmet>
             <div className="page-heading">Submission Guidelines</div>
-            <p class="mb-4">The LSE Law Review Blog is dedicated to publishing short articles on topical legal issues in Public, Private, International and Criminal Law. All submissions to the Blog undergo the same stringent process of selection by the Editorial Board as articles submitted to the Main Journal. We accept submissions to the Blog throughout the academic year and summer holidays.The best submissions to the Blog each year also stand the chance of being selected for publication in the Main Journal and winning cash prizes sponsored by the LSE Law Review. </p>
+            <p class="mb-4">The LSE Law Review Blog is dedicated to publishing short articles on topical legal issues in Public, Private, International and Criminal Law. All submissions to the Blog undergo the same stringent process of selection by the Editorial Board as articles submitted to the Main Journal. We accept submissions to the Blog throughout the academic year and summer holidays. We review submissions throughout the 2021-22 academic year. However, submissions are reviewed and published on a rolling basis. We encourage you to submit your work to us as early as possible, because we may close submissions earlier if we have received enough articles. </p>
+            <p class="mb-4">The best blog submission for 2021-2022 stands to win a £100 cash prize sponsored by Freshfields Bruckhaus Deringer LLP. There may also be cash prizes for other successful authors.</p>
 
             <h5 class="font-weight-bold page-heading-small">Submission Checklist</h5>
             <ol>
