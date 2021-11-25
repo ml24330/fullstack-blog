@@ -2,6 +2,7 @@ import React from 'react'
 import Bristol from '../assets/images/bristol-law-review.png'
 import Cambridge from '../assets/images/cambridge-law-review.png'
 import CULR from '../assets/images/CULR.png'
+import DeJure from '../assets/images/De Jure.png'
 import DeLege from '../assets/images/de-lege-ferenda-cambridge-law-review.png'
 import Exeter from '../assets/images/exeter-law-review.png'
 import Glasgow from '../assets/images/glasgow-law-review.png'
@@ -40,6 +41,13 @@ export default function PartnersPage() {
             <p class="mb-4">The Columbia Undergraduate Law Review (CULR) is Columbia University's premier undergraduate legal publication. CULR publishes long-form pieces by undergraduate students from across the globe in its print journal as well as original pieces by Columbia/Barnard students in its online journal. The goal of CULR is to provide Columbia University and the public with opportunities for the discussion of law-related ideas and the publication of undergraduate legal scholarship.</p>
             <p class="mb-0">Learn more: <a href="https://www.culawreview.org" target="_blank" rel="noopener noreferrer">www.culawreview.org</a></p>
             <p>Enquiries: <a href="mailto:culreboard@columbia.edu">culreboard@columbia.edu</a></p>
+            <br />
+
+            <h5 class="page-heading-small">De Jure Journal</h5>
+            <img className="img-small" src={DeJure} alt="exeter" />
+            <p class="mb-4">De Jure is a tri-annual student-run law journal established in 2008 under the auspices of ELSA Athens. It remains the only purely legal, student-run journal at the National and Kapodistrian University of Athens. De Jure has published a great variety of student articles in Greek and English, as well as pieces and interviews by esteemed law professors and practitioners, such as CJEU AG Rantos and ECtHR Judge Ktistakis.</p>
+            <p class="mb-0">Learn more: <a href="https://www.dejurejournal.com/ " target="_blank" rel="noopener noreferrer">www.dejurejournal.com</a></p>
+            <p>Enquiries: <a href="mailto:editorialteam@lselawreview.com">editorialteam@lselawreview.com</a></p>
             <br />
 
             <h5 class="page-heading-small">De Lege Ferenda (Cambridge Law Review)</h5>

@@ -64,14 +64,6 @@ export default function SponsorsPage() {
             <Collapse title={<><strong>Spring Scheme</strong>: 4th October 2021 – 17th February 2022</>}>
                 <p class="mb-4">This two-day scheme will help you develop your understanding of our selection process and the skills you need to demonstrate to secure a place on our vacation scheme. Following this workshop, you may be invited to be fast-tracked for a vacation scheme interview commencing in 2022. This workshop is open to both law and non-law students in their first year of an undergraduate degree.</p>
             </Collapse>
-            
-            <Collapse title={<><strong>Non-law Workshop</strong>: Monday 4th October 2021 - Thursday 18th November 2021</>}>
-                <p class="mb-4">This practical one-day workshop will tell you more about how to apply to Freshfields and include insights from lawyers who study a subject other than law. The event is open to undergraduates from all backgrounds and degree disciplines. </p>
-            </Collapse>
-            
-            <Collapse title={<><strong>Graduate Workshop</strong>: Monday 4th October 2021 - Thursday 18th November 2021</>}>
-                <p class="mb-4">For graduates of all disciplines, this practical one-day workshop will tell you more about how to apply to Freshfields, including insights from lawyers who applied at a later stage.</p>
-            </Collapse>
         
             <p class="h4 mb-4">Other events:</p>
         
