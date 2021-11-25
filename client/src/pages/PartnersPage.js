@@ -47,7 +47,7 @@ export default function PartnersPage() {
             <img className="img-small" src={DeJure} alt="exeter" />
             <p class="mb-4">De Jure is a tri-annual student-run law journal established in 2008 under the auspices of ELSA Athens. It remains the only purely legal, student-run journal at the National and Kapodistrian University of Athens. De Jure has published a great variety of student articles in Greek and English, as well as pieces and interviews by esteemed law professors and practitioners, such as CJEU AG Rantos and ECtHR Judge Ktistakis.</p>
             <p class="mb-0">Learn more: <a href="https://www.dejurejournal.com/ " target="_blank" rel="noopener noreferrer">www.dejurejournal.com</a></p>
-            <p>Enquiries: <a href="mailto:editorialteam@lselawreview.com">editorialteam@lselawreview.com</a></p>
+            <p>Enquiries: <a href="mailto:dejure@gr.elsa.org">dejure@gr.elsa.org</a></p>
             <br />
 
             <h5 class="page-heading-small">De Lege Ferenda (Cambridge Law Review)</h5>
