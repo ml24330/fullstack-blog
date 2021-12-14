@@ -1,5 +1,6 @@
 import React from 'react'
 import tvb from '../assets/images/3VB.jpg'
+import oec from '../assets/images/OEC_logo.jpg'
 import ff from '../assets/images/freshfields.png'
 import Collapse from '../components/Collapse'
 import { Helmet } from 'react-helmet'
@@ -18,6 +19,16 @@ export default function SponsorsPage() {
             <p class="mb-4">The LSE Law Review is proud to be sponsored by 3 Verulam Buildings. 3 Verulam Buildings is one of the UK’s principal sets of barristers’ chambers, with over 80 members specialising in a wide range of commercial law and practising both nationally, in other countries’ jurisdictions and internationally.</p> 
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.3vb.com"> www.3vb.com </a> </p>
             
+            
+            <br />
+            <h5 class="font-weight-bold page-heading-small">One Essex Court</h5>
+            <td width="20%">
+            <img className="img-small" src={oec} alt="OEC" />
+            </td>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by One Essex Court. One Essex Court will be sponsoring a £200 prize for the LSE Law Review Volume 7 (2021-22). One Essex Court is a leading set of barristers' chambers, specialising in commercial disputes. Its members provide specialist advice and advocacy services worldwide, which include all areas of dispute resolution, litigation and arbitration.</p>
+            <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.oeclaw.co.uk/"> www.oeclaw.co.uk </a> </p>
+
+
             <br/>
             <h5 class="font-weight-bold page-heading-small">Freshfields Bruckhaus Deringer LLP</h5>
             <td width="20%">
@@ -64,19 +75,6 @@ export default function SponsorsPage() {
             <Collapse title={<><strong>Spring Scheme</strong>: 4th October 2021 – 17th February 2022</>}>
                 <p class="mb-4">This two-day scheme will help you develop your understanding of our selection process and the skills you need to demonstrate to secure a place on our vacation scheme. Following this workshop, you may be invited to be fast-tracked for a vacation scheme interview commencing in 2022. This workshop is open to both law and non-law students in their first year of an undergraduate degree.</p>
             </Collapse>
-        
-            <p class="h4 mb-4">Other events:</p>
-        
-            <Collapse title={<><strong>Freshfields’ Focus</strong>: Every Tuesday in November</>}>
-                <p class="mb-2">Sign up to our virtual Freshfields focus events for November 2021 to learn about different aspects of life at Freshfields, including pro bono, our diversity and inclusion team, our technology and innovation team and our trainees. We don't require an application for these events.</p>
-                <ul>
-                    <li><a href="https://www.eventbrite.co.uk/e/189721109947" target="_blank" rel="noopener noreferrer">2nd November - Applications and Interviews</a></li>
-                    <li><a href="https://www.eventbrite.co.uk/e/189723336607" target="_blank" rel="noopener noreferrer">9th November - Pro Bono</a></li>
-                    <li><a href="https://www.eventbrite.co.uk/e/189722052767" target="_blank" rel="noopener noreferrer">16th November - Trainee Panel</a></li>
-                    <li><a href="https://www.eventbrite.co.uk/e/189724780927" target="_blank" rel="noopener noreferrer">23rd November - Diveristy & Inclusion</a></li>
-                    <li><a href="https://www.eventbrite.co.uk/e/189725252337" target="_blank" rel="noopener noreferrer">30th November - Technology & Innovation</a></li>
-                </ul>
-            </Collapse>    
 
 
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.freshfields.com"> www.freshfields.com </a> </p>
