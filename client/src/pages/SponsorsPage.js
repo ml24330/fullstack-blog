@@ -25,7 +25,7 @@ export default function SponsorsPage() {
             <td width="20%">
             <img className="img-small" src={oec} alt="OEC" />
             </td>
-            <p class="mb-4">The LSE Law Review is proud to be sponsored by One Essex Court. One Essex Court will be sponsoring a £200 prize for the LSE Law Review Volume 7 (2021-22). One Essex Court is a leading set of barristers' chambers, specialising in commercial disputes. Its members provide specialist advice and advocacy services worldwide, which include all areas of dispute resolution, litigation and arbitration.</p>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by One Essex Court. One Essex Court is a leading set of barristers' chambers, specialising in commercial disputes. Its members provide specialist advice and advocacy services worldwide, which include all areas of dispute resolution, litigation and arbitration.</p>
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.oeclaw.co.uk/"> www.oeclaw.co.uk </a> </p>
 
 
