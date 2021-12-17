@@ -11,6 +11,7 @@ import HULR from '../assets/images/HULR.png'
 import Kings from '../assets/images/kings-student-law-review.png'
 import Oxford from '../assets/images/oxford-university-undergraduate-law-journal.png'
 import SOUH from '../assets/images/sohp.png'
+import UCLJLJ from '../assets/images/ucljlj.jpg'
 import Trinity from '../assets/images/trinity-college-law-review.png'
 import { Helmet } from 'react-helmet'
 
@@ -103,6 +104,13 @@ export default function PartnersPage() {
             <p class="mb-4">The Trinity College Law Review is Ireland's oldest and leading student-run law review. Now in our twenty-third year, we serve students and the academy by providing a forum for the publication of original leading research of the highest quality. We also provide training in the performance of all the editorial and administrative tasks associated with the publication of a legal journal to our Editorial Board.</p>
             <p class="mb-0">Learn more: <a href="https://trinitycollegelawreview.org" target="_blank" rel="noopener noreferrer">trinitycollegelawreview.org</a></p>
             <p>Enquiries: <a href="mailto:lawreview.trinitycollege@gmail.com">lawreview.trinitycollege@gmail.com</a></p>
+            <br />
+
+            <h5 class="page-heading-small">UCL Journal of Law and Jurisprudence</h5>
+            <img className="img-small" src={UCLJLJ} alt="UCLJLJ" />
+            <p class="mb-4">The UCL Journal of Law and Jurisprudence (UCLJLJ) is a law edited and published by graduate (Masters and PhD) students of <a style={{textDecoration: 'underline'}} href="https://www.ucl.ac.uk/laws/" target="_blank" rel="noopener noreferrer">UCL Faculty of Laws</a>. The Journal publishes scholarly contributions from academics, researchers and practitioners, as well as showcasing outstanding research of post-graduate students at UCL. </p>
+            <p class="mb-0">Learn more: <a href="https://student-journals.ucl.ac.uk/laj/ " target="_blank" rel="noopener noreferrer">student-journals.ucl.ac.uk/laj/ </a></p>
+            <p>Enquiries: <a href="mailto:ucljlj.submissions@ucl.ac.uk">ucljlj.submissions@ucl.ac.uk</a></p>
             <br />
 
             <h5 class="page-heading-small">University of Glasgow Law Review</h5>

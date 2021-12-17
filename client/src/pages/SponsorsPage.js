@@ -1,6 +1,7 @@
 import React from 'react'
 import tvb from '../assets/images/3VB.jpg'
 import oec from '../assets/images/OEC_logo.jpg'
+import matrix from '../assets/images/matrix.jpg'
 import ff from '../assets/images/freshfields.png'
 import Collapse from '../components/Collapse'
 import { Helmet } from 'react-helmet'
@@ -27,6 +28,15 @@ export default function SponsorsPage() {
             </td>
             <p class="mb-4">The LSE Law Review is proud to be sponsored by One Essex Court. One Essex Court is a leading set of barristers' chambers, specialising in commercial disputes. Its members provide specialist advice and advocacy services worldwide, which include all areas of dispute resolution, litigation and arbitration.</p>
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.oeclaw.co.uk/"> www.oeclaw.co.uk </a> </p>
+
+
+            <br />
+            <h5 class="font-weight-bold page-heading-small">Matrix Chambers</h5>
+            <td width="20%">
+            <img className="img-small" src={matrix} alt="Matrix Chambers" />
+            </td>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by Matrix Chambers. Matrix is a barristers’ chambers with offices in Gray’s Inn, London, Geneva and Brussels. They are a group of independent and specialist lawyers who work across a wide range of areas of law. Their members work throughout the UK and have extensive experience internationally having worked in over 100 countries.</p>
+            <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.matrixlaw.co.uk/"> www.matrixlaw.co.uk</a> </p>
 
 
             <br/>

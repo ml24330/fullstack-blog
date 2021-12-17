@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0b3bb5f0.chunk.css",
-    "main.js": "/static/js/main.1900f724.chunk.js",
-    "main.js.map": "/static/js/main.1900f724.chunk.js.map",
+    "main.js": "/static/js/main.52f5c800.chunk.js",
+    "main.js.map": "/static/js/main.52f5c800.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.18eeda4f.js",
     "runtime-main.js.map": "/static/js/runtime-main.18eeda4f.js.map",
     "static/css/2.3051a125.chunk.css": "/static/css/2.3051a125.chunk.css",
@@ -30,7 +30,7 @@
     "static/media/de-lege-ferenda-cambridge-law-review.880435ee.png": "/static/media/de-lege-ferenda-cambridge-law-review.880435ee.png",
     "static/media/freshfields.b3ae346d.png": "/static/media/freshfields.b3ae346d.png",
     "static/media/glasgow-law-review.b2ef7da2.png": "/static/media/glasgow-law-review.b2ef7da2.png",
-    "static/media/header.12c7f545.png": "/static/media/header.12c7f545.png",
+    "static/media/header.f6aaede1.png": "/static/media/header.f6aaede1.png",
     "static/media/hero3.9dc0102d.jpg": "/static/media/hero3.9dc0102d.jpg",
     "static/media/img2.189850b0.jpeg": "/static/media/img2.189850b0.jpeg",
     "static/media/img3.2ec4c3a1.jpeg": "/static/media/img3.2ec4c3a1.jpeg",
@@ -39,18 +39,20 @@
     "static/media/kings-student-law-review.0c880438.png": "/static/media/kings-student-law-review.0c880438.png",
     "static/media/linkedin.7defd339.svg": "/static/media/linkedin.7defd339.svg",
     "static/media/logo.54dc3bbb.png": "/static/media/logo.54dc3bbb.png",
+    "static/media/matrix.d9731bcc.jpg": "/static/media/matrix.d9731bcc.jpg",
     "static/media/oxford-university-undergraduate-law-journal.1b4f27b9.png": "/static/media/oxford-university-undergraduate-law-journal.1b4f27b9.png",
     "static/media/placeholder.0a8adf32.png": "/static/media/placeholder.0a8adf32.png",
     "static/media/search.28b0ad10.svg": "/static/media/search.28b0ad10.svg",
     "static/media/sohp.d5cf3cee.png": "/static/media/sohp.d5cf3cee.png",
     "static/media/time.416a61b0.svg": "/static/media/time.416a61b0.svg",
-    "static/media/trinity-college-law-review.601da894.png": "/static/media/trinity-college-law-review.601da894.png"
+    "static/media/trinity-college-law-review.601da894.png": "/static/media/trinity-college-law-review.601da894.png",
+    "static/media/ucljlj.22b24aa3.jpg": "/static/media/ucljlj.22b24aa3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.18eeda4f.js",
     "static/css/2.3051a125.chunk.css",
     "static/js/2.42c0cdb4.chunk.js",
     "static/css/main.0b3bb5f0.chunk.css",
-    "static/js/main.1900f724.chunk.js"
+    "static/js/main.52f5c800.chunk.js"
   ]
 }
