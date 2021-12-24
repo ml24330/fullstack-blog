@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0b3bb5f0.chunk.css",
-    "main.js": "/static/js/main.52f5c800.chunk.js",
-    "main.js.map": "/static/js/main.52f5c800.chunk.js.map",
+    "main.js": "/static/js/main.227f3da4.chunk.js",
+    "main.js.map": "/static/js/main.227f3da4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.18eeda4f.js",
     "runtime-main.js.map": "/static/js/runtime-main.18eeda4f.js.map",
     "static/css/2.3051a125.chunk.css": "/static/css/2.3051a125.chunk.css",
@@ -15,6 +15,7 @@
     "static/css/main.0b3bb5f0.chunk.css.map": "/static/css/main.0b3bb5f0.chunk.css.map",
     "static/js/2.42c0cdb4.chunk.js.LICENSE.txt": "/static/js/2.42c0cdb4.chunk.js.LICENSE.txt",
     "static/media/3VB.0e9c1f0c.jpg": "/static/media/3VB.0e9c1f0c.jpg",
+    "static/media/6KBW.4016254b.jpg": "/static/media/6KBW.4016254b.jpg",
     "static/media/CULR.a9789e08.png": "/static/media/CULR.a9789e08.png",
     "static/media/De Jure.2dbe761c.png": "/static/media/De Jure.2dbe761c.png",
     "static/media/HULR.4451ce65.png": "/static/media/HULR.4451ce65.png",
@@ -30,7 +31,7 @@
     "static/media/de-lege-ferenda-cambridge-law-review.880435ee.png": "/static/media/de-lege-ferenda-cambridge-law-review.880435ee.png",
     "static/media/freshfields.b3ae346d.png": "/static/media/freshfields.b3ae346d.png",
     "static/media/glasgow-law-review.b2ef7da2.png": "/static/media/glasgow-law-review.b2ef7da2.png",
-    "static/media/header.f6aaede1.png": "/static/media/header.f6aaede1.png",
+    "static/media/header.48a0d643.png": "/static/media/header.48a0d643.png",
     "static/media/hero3.9dc0102d.jpg": "/static/media/hero3.9dc0102d.jpg",
     "static/media/img2.189850b0.jpeg": "/static/media/img2.189850b0.jpeg",
     "static/media/img3.2ec4c3a1.jpeg": "/static/media/img3.2ec4c3a1.jpeg",
@@ -53,6 +54,6 @@
     "static/css/2.3051a125.chunk.css",
     "static/js/2.42c0cdb4.chunk.js",
     "static/css/main.0b3bb5f0.chunk.css",
-    "static/js/main.52f5c800.chunk.js"
+    "static/js/main.227f3da4.chunk.js"
   ]
 }

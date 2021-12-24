@@ -109,7 +109,7 @@ export default function PartnersPage() {
             <h5 class="page-heading-small">UCL Journal of Law and Jurisprudence</h5>
             <img className="img-small" src={UCLJLJ} alt="UCLJLJ" />
             <p class="mb-4">The UCL Journal of Law and Jurisprudence (UCLJLJ) is a law edited and published by graduate (Masters and PhD) students of <a style={{textDecoration: 'underline'}} href="https://www.ucl.ac.uk/laws/" target="_blank" rel="noopener noreferrer">UCL Faculty of Laws</a>. The Journal publishes scholarly contributions from academics, researchers and practitioners, as well as showcasing outstanding research of post-graduate students at UCL. </p>
-            <p class="mb-0">Learn more: <a href="https://student-journals.ucl.ac.uk/laj/ " target="_blank" rel="noopener noreferrer">student-journals.ucl.ac.uk/laj/ </a></p>
+            <p class="mb-0">Learn more: <a href="https://student-journals.ucl.ac.uk/laj/" target="_blank" rel="noopener noreferrer">student-journals.ucl.ac.uk/laj/ </a></p>
             <p>Enquiries: <a href="mailto:ucljlj.submissions@ucl.ac.uk">ucljlj.submissions@ucl.ac.uk</a></p>
             <br />
 

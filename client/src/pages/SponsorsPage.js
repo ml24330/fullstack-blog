@@ -2,6 +2,7 @@ import React from 'react'
 import tvb from '../assets/images/3VB.jpg'
 import oec from '../assets/images/OEC_logo.jpg'
 import matrix from '../assets/images/matrix.jpg'
+import kbw from '../assets/images/6KBW.jpg'
 import ff from '../assets/images/freshfields.png'
 import Collapse from '../components/Collapse'
 import { Helmet } from 'react-helmet'
@@ -28,6 +29,15 @@ export default function SponsorsPage() {
             </td>
             <p class="mb-4">The LSE Law Review is proud to be sponsored by One Essex Court. One Essex Court is a leading set of barristers' chambers, specialising in commercial disputes. Its members provide specialist advice and advocacy services worldwide, which include all areas of dispute resolution, litigation and arbitration.</p>
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.oeclaw.co.uk/"> www.oeclaw.co.uk </a> </p>
+
+
+            <br />
+            <h5 class="font-weight-bold page-heading-small">6KBW College Hill</h5>
+            <td width="20%">
+            <img className="img-small" src={kbw} alt="kbw" />
+            </td>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by 6KBW College Hill. 6KBW College Hill has held a pre-eminent position in criminal law for over 70 years. They have been at the forefront of the expansion of the criminal law into related areas of public and civil law. Their chambers includes many of the leading practitioners in their fields. They act in many of the most significant, sensitive, and high-profile cases heard in the UK, Europe, and around the world. Many of the landmark cases in crime, extradition, and the proceeds of crime have been argued by our members.</p>
+            <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.6kbw.com/"> www.6kbw.com</a> </p>
 
 
             <br />
