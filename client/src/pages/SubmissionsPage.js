@@ -29,7 +29,7 @@ export default function SubmissionsPage() {
             <li>Please provide a declaration that the submission is entirely the author's own. Any work of others, whether published or not, must be properly identified and referenced.</li>
             </ol>
 
-            Submissions should be sent to <a href="mailto:editorialteam@lselawreview.com">editorialteam@lselawreview.com</a>. <strong>(Update as of 3 December 2021: Due to the high volume of submissions we have received, we will be postponing review of all new submissions to the LSE Law Review Blog to after the Christmas break in January 2022. We will still be accepting submissions throughout December, but please note that the delay means you may only hear back from us about the outcome of your submission in late January 2022.)</strong>
+            Submissions should be sent to <a href="mailto:editorialteam@lselawreview.com">editorialteam@lselawreview.com</a>. <strong>(Update as of 30 December 2021: We are now accepting submissions to the LSE Law Review Blog from now until sometime in March 2022. You are strongly advised to submit your work as soon as possible because we may close submissions earlier if we have received enough submissions.)</strong>
         </div>
     )
 }
