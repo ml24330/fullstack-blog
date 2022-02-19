@@ -1,6 +1,7 @@
 import React from 'react'
 import tvb from '../assets/images/3VB.jpg'
 import oec from '../assets/images/OEC_logo.jpg'
+import serle from '../assets/images/serlecourt.png'
 import matrix from '../assets/images/matrix.jpg'
 import kbw from '../assets/images/6KBW.jpg'
 import ff from '../assets/images/freshfields.png'
@@ -41,6 +42,15 @@ export default function SponsorsPage() {
 
 
             <br />
+            <h5 class="font-weight-bold page-heading-small">Serle Court</h5>
+            <td width="20%">
+            <img className="img-small" src={serle} alt="Serle Court" />
+            </td>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by Serle Court. Serle Court is a barristers’ chambers located in Lincoln’s Inn. They are highly specialised in Chancery and Commercial disciplines, ranking as the only Band 1 set in Chambers Global 2022 for dispute resolution. Serle Court are experts in ‘the whole range of business law’, advising high-profile private and professional clients and the world’s largest companies. The chambers hosts some of the biggest names at the bar and command a high-level of respect within the chancery commercial world.</p>
+            <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.serlecourt.co.uk/"> www.serlecourt.co.uk</a> </p>
+
+
+            <br />
             <h5 class="font-weight-bold page-heading-small">Matrix Chambers</h5>
             <td width="20%">
             <img className="img-small" src={matrix} alt="Matrix Chambers" />
@@ -61,15 +71,6 @@ export default function SponsorsPage() {
             <p class="mb-4">You also need to be able to deliver a consistent, high-quality service across the globe. This means understanding not only the law, but also each client’s own business, the sector in which it operates, and the broader economic, political and cultural factors that affect the decisions it makes. That’s why we look for graduates who are creative, open-minded and curious about different ways of doing things.</p>
             <p class="h4 mb-4">Training Contract</p>
             <p class="mb-4">Our unique eight-seat training contract offers you a wide breadth of experience across our many areas of law. All trainees take at least one seat in dispute resolution and at least two seats in global transactions (across corporate, finance and real estate). You can choose other seats in: antitrust, competition and trade; people and reward; and tax.</p>
-            
-            <Collapse title={<><strong>Winter application window</strong>: Monday 4th October 2021 – Thursday 6th January 2022</>}>
-                <p class="mb-4"></p>
-                <p class="mb-2">Who can apply:</p>
-                <ul>
-                    <li>final-year law and non-law students</li>
-                    <li>law and non-law graduates</li>
-                </ul>
-            </Collapse>
 
             <Collapse title={<><strong>Summer application window</strong>: Wed 1st June – Thursday 14th July 2022</>}>
                 <p class="mb-4"></p>
@@ -79,21 +80,6 @@ export default function SponsorsPage() {
                     <li>law graduates (UK law degree)</li>
                     <li>GDL graduates</li>
                 </ul>
-            </Collapse>
-
-            <Collapse title={<><strong>London-Asia Training Contract</strong>: Monday 4th October 2021 – Thursday 6th January 2022</>}> 
-                <p class="mb-4">If you are fluent in English and native in an Asian language, you could apply for our London-Asia training contract, and build your career and network on both sides of the globe.</p>
-                <p class="mb-4">This will see you spend your first year in London and your second year in Hong Kong. After the two-year training contract, you will qualify with one of our offices in Asia as an England-and-Wales-qualified solicitor.</p>
-            </Collapse>
-            
-            <Collapse title={<><strong>Vacation Scheme 2022</strong>: Monday 4th October 2021– Thursday 6th January 2022</>}>
-                <p class="mb-4">Our three-week summer vacation scheme is an exciting way to find out more about life at Freshfields. </p>
-                <p class="mb-4">You’ll do real work, participate in group exercises, meet associates and partners, and catch up at social events organised by trainees. It’s your opportunity to really immerse yourself in the work and culture that Freshfields has to offer. </p>
-                <p class="mb-4">You’re eligible to apply for the vacation scheme if you are a penultimate-year student studying any degree. If you are studying a four-year degree, you are able to apply in your second year and, if offered, we will defer your place.</p>
-            </Collapse>
-            
-            <Collapse title={<><strong>Spring Scheme</strong>: 4th October 2021 – 17th February 2022</>}>
-                <p class="mb-4">This two-day scheme will help you develop your understanding of our selection process and the skills you need to demonstrate to secure a place on our vacation scheme. Following this workshop, you may be invited to be fast-tracked for a vacation scheme interview commencing in 2022. This workshop is open to both law and non-law students in their first year of an undergraduate degree.</p>
             </Collapse>
 
 
