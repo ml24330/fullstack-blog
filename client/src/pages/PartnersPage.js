@@ -1,4 +1,5 @@
 import React from 'react'
+import Atlas from '../assets/images/atlas.png'
 import Bristol from '../assets/images/bristol-law-review.png'
 import Cambridge from '../assets/images/cambridge-law-review.png'
 import CULR from '../assets/images/CULR.png'
@@ -22,6 +23,13 @@ export default function PartnersPage() {
                 <title>Partners</title>
             </Helmet>
             <div className="page-heading">Partners</div>
+
+            <h5 class="page-heading-small">Atlas Law Journal</h5>
+            <img className="img-small" src={Atlas} alt="Atlas Law Journal" />
+            <p class="mb-4">The Atlas Law Journal is a Maastricht-based student journal founded in 2021. Our team consists of highly skilled and motivated students from Maastricht University, dedicated to fulfilling our common ambition. Our aim is to publish high-quality articles and research papers by students and professionals, thereby acting as a forum for legal debate. The main areas of focus of the ALJ are European and International Law.  We derive our purpose from the lacuna in publishing opportunities in the university sphere as a whole. </p>
+            <p class="mb-0">Learn more: <a href="https://www.linkedin.com/company/atlaslawjournal/ " target="_blank" rel="noopener noreferrer">www.linkedin.com/company/atlaslawjournal</a></p>
+            <p>Enquiries: <a href="mailto:atlaslawjournal@gmail.com">atlaslawjournal@gmail.com</a></p>
+            <br />
 
             <h5 class="page-heading-small">Bristol Law Review</h5>
             <img className="img-small" src={Bristol} alt="bristol" />

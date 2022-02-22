@@ -46,7 +46,7 @@ export default function SponsorsPage() {
             <td width="20%">
             <img className="img-small" src={serle} alt="Serle Court" />
             </td>
-            <p class="mb-4">The LSE Law Review is proud to be sponsored by Serle Court. Serle Court is a barristers’ chambers located in Lincoln’s Inn. They are highly specialised in Chancery and Commercial disciplines, ranking as the only Band 1 set in Chambers Global 2022 for dispute resolution. Serle Court are experts in ‘the whole range of business law’, advising high-profile private and professional clients and the world’s largest companies. The chambers hosts some of the biggest names at the bar and command a high-level of respect within the chancery commercial world.</p>
+            <p class="mb-4">The LSE Law Review is proud to be sponsored by Serle Court. Serle Court is a barristers’ chambers located in Lincoln’s Inn. They are highly specialised in Chancery and Commercial disciplines, ranking as the only Band 1 set in Chambers Global 2022 for for Dispute Resolution: The English Bar in United Arab Emirates. Serle Court are experts in ‘the whole range of business law’, advising high-profile private and professional clients and the world’s largest companies. The chambers hosts some of the biggest names at the bar and command a high-level of respect within the chancery commercial world.</p>
             <p> Learn more here: <a target="_blank" rel="noopener noreferrer" href="https://www.serlecourt.co.uk/"> www.serlecourt.co.uk</a> </p>
 
 
