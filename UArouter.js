@@ -53,7 +53,7 @@ UArouter.get('*', async (req, res) => {
             image = `https://res.cloudinary.com/dv6qbaj7u/image/upload/v1633512635/${author.name.replace(' ', '-').replace('%20', '-')}`
         }
     } else if(/\/\d{4}\/\d{2}\/[A-Z]+/gi.test(req.url)) {
-        const slug = req.url.match(/\/\d{4}\/\d{2}\/([A-Z0-9\-]+)/i)[1]
+        const slug = req.url.match(/\/\d{4}\/\d{2}\/([A-Z0-9_\-]+)/i)[1]
         const post = await findPost(slug)
         if(post !== null) {
             title = await genTitle(post.title)
