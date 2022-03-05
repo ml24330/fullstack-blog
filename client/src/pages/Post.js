@@ -52,18 +52,17 @@ export default function Post({ match, history }) {
                     }
             }
 
-
-            // if(post.slug) {
-            //     const visits_res = await fetch(`${API_URL}/visits/inc/${post.slug}`, { 
-            //         method: 'PATCH'
-            //     })
-            //     if(visits_res.status === 404) {
-            //         await fetch(`/api/visits/${post.slug}`, { method: 'post' })
-            //     }
-            //     const post_res = await fetch(`${API_URL}/visits/${post.slug}`)
-            //     const post_dat = await post_res.json()
-            //     setVisits(post_dat.visits)
-            // }   
+            if(dat.slug) {
+                const visits_res = await fetch(`${API_URL}/visits/inc/${dat.slug}`, { 
+                    method: 'PATCH'
+                })
+                if(visits_res.status === 404) {
+                    await fetch(`/api/visits/${dat.slug}`, { method: 'post' })
+                }
+                // const post_res = await fetch(`${API_URL}/visits/${post.slug}`)
+                // const post_dat = await post_res.json()
+                // setVisits(post_dat.visits)
+            }   
         })()
     }, [])
 

@@ -68,7 +68,6 @@ postsRouter.get('/search/:query(*)', async (req, res) => {
                 length: { $strLenCP: '$content' }
             }}
         ])
-        console.log(posts)
         // const posts = await Post.find({ $or: [
         //     { title: { '$regex': query, '$options': 'i' } },
         //     { author: { '$regex': query, '$options': 'i' } },
