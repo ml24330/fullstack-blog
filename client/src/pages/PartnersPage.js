@@ -12,6 +12,7 @@ import HULR from '../assets/images/HULR.png'
 import Kings from '../assets/images/kings-student-law-review.png'
 import Oxford from '../assets/images/oxford-university-undergraduate-law-journal.png'
 import SOUH from '../assets/images/sohp.png'
+import SSLR from '../assets/images/SSLR.png'
 import UCLJLJ from '../assets/images/ucljlj.jpg'
 import Trinity from '../assets/images/trinity-college-law-review.png'
 import { Helmet } from 'react-helmet'
@@ -105,6 +106,13 @@ export default function PartnersPage() {
             <p class="mb-4">Over 60 member journals comprise The Society of Undergraduate Humanities Publications. Since our inception, we have committed ourselves to an egalitarian, inclusive philosophy that seeks to connect as many student editors as possible.</p>
             <p class="mb-0">Learn more: <a href="https://www.thesuhp.org/" target="_blank" rel="noopener noreferrer">www.thesuhp.org</a></p>
             <p>Enquiries: <a href="mailto:suhppresident@gmail.com">suhppresident@gmail.com</a></p>
+            <br />
+
+            <h5 class="page-heading-small">The Sorbonne Student Law Review</h5>
+            <img className="img-small" src={SSLR} alt="trinity" />
+            <p class="mb-4"><i>Revue juridique des étudiants de la Sorbonne</i> is an academic journal created in 2017 by doctoral students, teachers and students of the Université Panthéon-Sorbonne, in partnership with the École de droit de la Sorbonne. This journal aims to offer English and French-speaking authors the opportunity to be published. The review develops an editorial line that promotes the work of researchers and visiting professors of the Sorbonne Law School as well as that of researchers not affiliated with the Université Paris 1 Panthéon-Sorbonne. It promotes all legal contributions, regardless of the fields in which they are made, and encourages studies relating to French law written in English as well as "transdisciplinary" studies, such as Law & Economics, Law & Literature, gender studies, sociology and anthropology of law, etc.</p>
+            <p class="mb-0">Learn more: <a href="https://sorbonnestudentlawreview.org/journal" target="_blank" rel="noopener noreferrer">sorbonnestudentlawreview.org/journal</a></p>
+            <p>Enquiries: <a href="mailto:contact@sorbonnestudentlawreview.org">contact@sorbonnestudentlawreview.org</a></p>
             <br />
 
             <h5 class="page-heading-small">Trinity College Law Review</h5>

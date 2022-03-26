@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0b3bb5f0.chunk.css",
-    "main.js": "/static/js/main.fabf6026.chunk.js",
-    "main.js.map": "/static/js/main.fabf6026.chunk.js.map",
+    "main.js": "/static/js/main.ba362e38.chunk.js",
+    "main.js.map": "/static/js/main.ba362e38.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.18eeda4f.js",
     "runtime-main.js.map": "/static/js/runtime-main.18eeda4f.js.map",
     "static/css/2.3051a125.chunk.css": "/static/css/2.3051a125.chunk.css",
@@ -25,6 +25,7 @@
     "static/media/Map.f01b4aea.png": "/static/media/Map.f01b4aea.png",
     "static/media/OEC_logo.374ecaab.jpg": "/static/media/OEC_logo.374ecaab.jpg",
     "static/media/Prize.4806d2a2.png": "/static/media/Prize.4806d2a2.png",
+    "static/media/SSLR.d5ec0901.png": "/static/media/SSLR.d5ec0901.png",
     "static/media/atlas.46de3421.png": "/static/media/atlas.46de3421.png",
     "static/media/book.ccb3eedc.svg": "/static/media/book.ccb3eedc.svg",
     "static/media/bristol-law-review.d2db2938.png": "/static/media/bristol-law-review.d2db2938.png",
@@ -56,6 +57,6 @@
     "static/css/2.3051a125.chunk.css",
     "static/js/2.42c0cdb4.chunk.js",
     "static/css/main.0b3bb5f0.chunk.css",
-    "static/js/main.fabf6026.chunk.js"
+    "static/js/main.ba362e38.chunk.js"
   ]
 }
