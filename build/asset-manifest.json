@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b3bb5f0.chunk.css",
-    "main.js": "/static/js/main.7b906fc3.chunk.js",
-    "main.js.map": "/static/js/main.7b906fc3.chunk.js.map",
+    "main.css": "/static/css/main.96ae7673.chunk.css",
+    "main.js": "/static/js/main.4838df21.chunk.js",
+    "main.js.map": "/static/js/main.4838df21.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.18eeda4f.js",
     "runtime-main.js.map": "/static/js/runtime-main.18eeda4f.js.map",
     "static/css/2.3051a125.chunk.css": "/static/css/2.3051a125.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.ddbb7db7.chunk.js.map": "/static/js/3.ddbb7db7.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.3051a125.chunk.css.map": "/static/css/2.3051a125.chunk.css.map",
-    "static/css/main.0b3bb5f0.chunk.css.map": "/static/css/main.0b3bb5f0.chunk.css.map",
+    "static/css/main.96ae7673.chunk.css.map": "/static/css/main.96ae7673.chunk.css.map",
     "static/js/2.42c0cdb4.chunk.js.LICENSE.txt": "/static/js/2.42c0cdb4.chunk.js.LICENSE.txt",
     "static/media/3VB.0e9c1f0c.jpg": "/static/media/3VB.0e9c1f0c.jpg",
     "static/media/6KBW.4016254b.jpg": "/static/media/6KBW.4016254b.jpg",
@@ -33,7 +33,7 @@
     "static/media/de-lege-ferenda-cambridge-law-review.880435ee.png": "/static/media/de-lege-ferenda-cambridge-law-review.880435ee.png",
     "static/media/freshfields.b3ae346d.png": "/static/media/freshfields.b3ae346d.png",
     "static/media/glasgow-law-review.b2ef7da2.png": "/static/media/glasgow-law-review.b2ef7da2.png",
-    "static/media/header.c8548b8a.png": "/static/media/header.c8548b8a.png",
+    "static/media/header.32e61666.png": "/static/media/header.32e61666.png",
     "static/media/hero3.9dc0102d.jpg": "/static/media/hero3.9dc0102d.jpg",
     "static/media/img2.189850b0.jpeg": "/static/media/img2.189850b0.jpeg",
     "static/media/img3.2ec4c3a1.jpeg": "/static/media/img3.2ec4c3a1.jpeg",
@@ -56,7 +56,7 @@
     "static/js/runtime-main.18eeda4f.js",
     "static/css/2.3051a125.chunk.css",
     "static/js/2.42c0cdb4.chunk.js",
-    "static/css/main.0b3bb5f0.chunk.css",
-    "static/js/main.7b906fc3.chunk.js"
+    "static/css/main.96ae7673.chunk.css",
+    "static/js/main.4838df21.chunk.js"
   ]
 }
